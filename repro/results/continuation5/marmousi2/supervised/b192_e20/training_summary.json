@@ -1,0 +1,14 @@
+{
+  "completed_steps": 6525,
+  "completed_epochs": 25,
+  "maximum_epochs": 25,
+  "patience": 5,
+  "min_delta": 1e-05,
+  "best_loss": 0.05152367519599105,
+  "patience_best": 0.05152367519599105,
+  "best_epoch": 21,
+  "bad_epochs": 4,
+  "last_epoch": 25,
+  "stopped": false,
+  "evaluation_weights": "runs/continuation5/marmousi2/supervised/b192_e20/best_weights.pth"
+}

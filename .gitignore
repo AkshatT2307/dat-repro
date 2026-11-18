@@ -1,0 +1,19 @@
+# Local environments, credentials and runtime data
+.venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+.aws/
+.codex/
+.agents/
+.DS_Store
+nohup.out
+*.pt
+*.pth
+*.ckpt
+*.tmp
+repro/data/
+repro/runs/
+repro/logs/

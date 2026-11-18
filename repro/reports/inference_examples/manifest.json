@@ -1,0 +1,156 @@
+{
+  "seed": 721,
+  "selection": "Fixed random ImageNet holdout images; evenly spaced nonzero test seismic tiles. No selection by scores.",
+  "models": {
+    "imagenet/idr": "runs/continuation5/imagenet/idr/b192_e20/best_weights.pth",
+    "imagenet/supervised": "runs/continuation5/imagenet/supervised/b192_e20/best_weights.pth",
+    "marmousi2/idr": "runs/continuation5/marmousi2/idr/b128_e30/best_weights.pth",
+    "marmousi2/supervised": "runs/continuation5/marmousi2/supervised/b128_e30/best_weights.pth"
+  },
+  "examples": [
+    {
+      "dataset": "imagenet",
+      "source": "val_00049775.JPEG",
+      "sigma": 0.09803921568627451,
+      "metric": "PSNR",
+      "scores_db": {
+        "noisy": 20.185510298697523,
+        "idr": 26.39041742102709,
+        "supervised": 27.4821154663482
+      },
+      "arrays": "imagenet_sigma25_example1.npz"
+    },
+    {
+      "dataset": "imagenet",
+      "source": "val_00031463.JPEG",
+      "sigma": 0.09803921568627451,
+      "metric": "PSNR",
+      "scores_db": {
+        "noisy": 20.165437439744007,
+        "idr": 27.225634170107632,
+        "supervised": 28.68902491202136
+      },
+      "arrays": "imagenet_sigma25_example2.npz"
+    },
+    {
+      "dataset": "imagenet",
+      "source": "val_00035693.JPEG",
+      "sigma": 0.09803921568627451,
+      "metric": "PSNR",
+      "scores_db": {
+        "noisy": 20.1687472699545,
+        "idr": 28.39653425614106,
+        "supervised": 28.89133148806598
+      },
+      "arrays": "imagenet_sigma25_example3.npz"
+    },
+    {
+      "dataset": "imagenet",
+      "source": "val_00049775.JPEG",
+      "sigma": 0.19607843137254902,
+      "metric": "PSNR",
+      "scores_db": {
+        "noisy": 14.16491039644157,
+        "idr": 24.346816642427132,
+        "supervised": 24.64745176748019
+      },
+      "arrays": "imagenet_sigma50_example1.npz"
+    },
+    {
+      "dataset": "imagenet",
+      "source": "val_00031463.JPEG",
+      "sigma": 0.19607843137254902,
+      "metric": "PSNR",
+      "scores_db": {
+        "noisy": 14.144837526233863,
+        "idr": 25.366023387921963,
+        "supervised": 25.74541621028896
+      },
+      "arrays": "imagenet_sigma50_example2.npz"
+    },
+    {
+      "dataset": "imagenet",
+      "source": "val_00035693.JPEG",
+      "sigma": 0.19607843137254902,
+      "metric": "PSNR",
+      "scores_db": {
+        "noisy": 14.148147365101716,
+        "idr": 25.689507256066197,
+        "supervised": 25.692047391492174
+      },
+      "arrays": "imagenet_sigma50_example3.npz"
+    },
+    {
+      "dataset": "marmousi2",
+      "source": "Test tile: time 0, trace 2304",
+      "sigma": 0.2,
+      "metric": "SNR",
+      "scores_db": {
+        "noisy": 21.35468771235507,
+        "idr": 23.63901296628992,
+        "supervised": 28.470131210391017
+      },
+      "arrays": "marmousi2_sigma0.2_example1.npz"
+    },
+    {
+      "dataset": "marmousi2",
+      "source": "Test tile: time 384, trace 2304",
+      "sigma": 0.2,
+      "metric": "SNR",
+      "scores_db": {
+        "noisy": 5.6766683589334725,
+        "idr": 16.401562289568936,
+        "supervised": 16.816846872350883
+      },
+      "arrays": "marmousi2_sigma0.2_example2.npz"
+    },
+    {
+      "dataset": "marmousi2",
+      "source": "Test tile: time 768, trace 2304",
+      "sigma": 0.2,
+      "metric": "SNR",
+      "scores_db": {
+        "noisy": -5.306083482357905,
+        "idr": 4.923826001147932,
+        "supervised": 5.064872486349506
+      },
+      "arrays": "marmousi2_sigma0.2_example3.npz"
+    },
+    {
+      "dataset": "marmousi2",
+      "source": "Test tile: time 0, trace 2304",
+      "sigma": 0.4,
+      "metric": "SNR",
+      "scores_db": {
+        "noisy": 15.334087813767223,
+        "idr": 22.913114942609013,
+        "supervised": 26.532199677030093
+      },
+      "arrays": "marmousi2_sigma0.4_example1.npz"
+    },
+    {
+      "dataset": "marmousi2",
+      "source": "Test tile: time 384, trace 2304",
+      "sigma": 0.4,
+      "metric": "SNR",
+      "scores_db": {
+        "noisy": -0.343931552889462,
+        "idr": 13.395337434943732,
+        "supervised": 13.90008694085644
+      },
+      "arrays": "marmousi2_sigma0.4_example2.npz"
+    },
+    {
+      "dataset": "marmousi2",
+      "source": "Test tile: time 768, trace 2304",
+      "sigma": 0.4,
+      "metric": "SNR",
+      "scores_db": {
+        "noisy": -11.326683392473495,
+        "idr": 2.411601307628268,
+        "supervised": 2.5285140344372765
+      },
+      "arrays": "marmousi2_sigma0.4_example3.npz"
+    }
+  ]
+}

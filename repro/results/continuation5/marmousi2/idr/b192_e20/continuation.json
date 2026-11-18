@@ -1,0 +1,15 @@
+{
+  "source": "runs/epoch128/marmousi2/idr/b192_e20",
+  "start_epoch": 20,
+  "start_step": 5220,
+  "additional_epochs": 5,
+  "maximum_epoch": 25,
+  "batch": 192,
+  "learning_rate": 7.5e-05,
+  "milestones": [
+    2610,
+    4176
+  ],
+  "patience_reset": true,
+  "best_validation_preserved": 0.08927249668964317
+}

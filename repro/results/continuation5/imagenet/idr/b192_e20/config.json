@@ -1,0 +1,63 @@
+{
+  "command": "train",
+  "method": "idr",
+  "epochs": 25,
+  "lr_milestones": [
+    2560,
+    4096
+  ],
+  "dataset": "imagenet",
+  "samples_per_epoch": 50000,
+  "device": "cuda",
+  "dry_run": false,
+  "validate": true,
+  "validation_count": 1000,
+  "split_seed": 2026,
+  "validation_seed": 2026,
+  "patience": 5,
+  "min_delta": 1e-05,
+  "data": "data/imagenet_val",
+  "batch": 192,
+  "tuning": "batch_compact128.json",
+  "steps": 6400,
+  "workers": 4,
+  "seed": 2026,
+  "output": "runs/continuation5/imagenet/idr/b192_e20",
+  "resume": true,
+  "console_format": "table",
+  "log_every": 100,
+  "save_every": 1000,
+  "allow_small_data": false,
+  "profile": "compact",
+  "images": 49000,
+  "manifest_sha256": "546b184e0f6fd094778e7f8a765fc24a5306268df9ac2fe4249ea6cf06e1cc21",
+  "torch": "2.7.1+cu128",
+  "gpu": "NVIDIA GeForce RTX 5070 Ti",
+  "precision": "FP32 (TF32 disabled)",
+  "crop": 256,
+  "output_size": 128,
+  "learning_rate": 0.0003,
+  "milestones": [
+    2560,
+    4096
+  ],
+  "budget": {
+    "samples_per_epoch": 49000,
+    "batch": 192,
+    "epochs": 25,
+    "steps_per_epoch": 256,
+    "steps": 6400,
+    "samples_total": 1225000,
+    "milestones": [
+      2560,
+      4096
+    ]
+  },
+  "split_fingerprint": "027cf7a8ff87baab75de5335545f78d471c4b3746875d74e6f59628cc0070f15",
+  "validation_images": 1000,
+  "channels": 3,
+  "noise_max": 0.19607843137254902,
+  "loss": "L1",
+  "upstream": "7061caa7360008135e7f732f82b94f7b230e59b1",
+  "effective_start_lr": 7.5e-05
+}

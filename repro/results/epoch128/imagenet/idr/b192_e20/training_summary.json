@@ -1,0 +1,14 @@
+{
+  "completed_steps": 5120,
+  "completed_epochs": 20,
+  "maximum_epochs": 20,
+  "patience": 5,
+  "min_delta": 1e-05,
+  "best_loss": 0.03527079595299438,
+  "patience_best": 0.03527079595299438,
+  "best_epoch": 18,
+  "bad_epochs": 2,
+  "last_epoch": 20,
+  "stopped": false,
+  "evaluation_weights": "runs/epoch128/imagenet/idr/b192_e20/best_weights.pth"
+}

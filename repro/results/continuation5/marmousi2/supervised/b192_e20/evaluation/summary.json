@@ -1,0 +1,45 @@
+{
+  "dataset": "AGL Elastic Marmousi2 NMOstack_time",
+  "split": "test",
+  "seed": 2026,
+  "results": [
+    {
+      "sigma": 0.1,
+      "tiles": 21,
+      "signal_tiles": 7,
+      "input_snr_db": 11.753792241484815,
+      "output_snr_db": 19.035703968120668,
+      "snr_gain_db": 7.281911726635857,
+      "rmse_normalized": 0.015081021058451124,
+      "rmse_original_amplitude": 1.3852679302648793e-06,
+      "signal_correlation": 0.9823725238137548,
+      "residual_signal_correlation": 0.08212044554831424
+    },
+    {
+      "sigma": 0.2,
+      "tiles": 21,
+      "signal_tiles": 7,
+      "input_snr_db": 5.733192324622567,
+      "output_snr_db": 16.24136698503379,
+      "snr_gain_db": 10.50817466041122,
+      "rmse_normalized": 0.02035942807060274,
+      "rmse_original_amplitude": 1.8701162656978037e-06,
+      "signal_correlation": 0.9639523475370856,
+      "residual_signal_correlation": 0.07511190360855845
+    },
+    {
+      "sigma": 0.4,
+      "tiles": 21,
+      "signal_tiles": 7,
+      "input_snr_db": -0.28740759355199536,
+      "output_snr_db": 13.249059481564922,
+      "snr_gain_db": 13.536467075116919,
+      "rmse_normalized": 0.02869576699988143,
+      "rmse_original_amplitude": 2.635851087616716e-06,
+      "signal_correlation": 0.9260753172373785,
+      "residual_signal_correlation": 0.06769195557628054
+    }
+  ],
+  "metric_aggregation": "mean over nonoverlapping 128x128 tiles",
+  "reference": "processed section before synthetic noise; not a noise-free field measurement"
+}
