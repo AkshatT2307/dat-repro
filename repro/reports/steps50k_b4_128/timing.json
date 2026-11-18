@@ -1,0 +1,56 @@
+{
+  "gpu": "NVIDIA GeForce RTX 5070 Ti",
+  "torch": "2.7.1+cu128",
+  "workers": 4,
+  "note": "Real loader; FP32; teacher active for IDR; estimates exclude setup/downloads and final evaluations. Benchmark models are discarded.",
+  "results": [
+    {
+      "dataset": "imagenet",
+      "method": "idr",
+      "batch": 4,
+      "output_size": 128,
+      "measured_steps": 200,
+      "seconds_per_step": 0.027157959375181236,
+      "validation_seconds": 7.896478174021468,
+      "estimated_training_hours": 0.3771938802108505,
+      "estimated_training_validation_hours": 0.42106320339985864,
+      "peak_allocated_gib": 1.9725151062011719
+    },
+    {
+      "dataset": "imagenet",
+      "method": "supervised",
+      "batch": 4,
+      "output_size": 128,
+      "measured_steps": 200,
+      "seconds_per_step": 0.017630959585076197,
+      "validation_seconds": 7.879089483059943,
+      "estimated_training_hours": 0.24487443868161385,
+      "estimated_training_validation_hours": 0.28864715803194685,
+      "peak_allocated_gib": 1.9688177108764648
+    },
+    {
+      "dataset": "marmousi2",
+      "method": "idr",
+      "batch": 4,
+      "output_size": 128,
+      "measured_steps": 200,
+      "seconds_per_step": 0.011264552164939233,
+      "validation_seconds": 0.10100622894242406,
+      "estimated_training_hours": 0.15645211340193377,
+      "estimated_training_validation_hours": 0.15701325911828057,
+      "peak_allocated_gib": 0.2189326286315918
+    },
+    {
+      "dataset": "marmousi2",
+      "method": "supervised",
+      "batch": 4,
+      "output_size": 128,
+      "measured_steps": 200,
+      "seconds_per_step": 0.008991882070549764,
+      "validation_seconds": 0.0952008820604533,
+      "estimated_training_hours": 0.12488725097985783,
+      "estimated_training_validation_hours": 0.12541614476908258,
+      "peak_allocated_gib": 0.21524477005004883
+    }
+  ]
+}

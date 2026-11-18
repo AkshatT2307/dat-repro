@@ -1,5 +1,7 @@
 # dat-repro
 
+> New experiment: [batch 4 / 50,000 optimizer steps, four runs, fresh-machine setup](repro/RUN_STEPS50K.md). Run `bash repro/setup_steps50k.sh --run` after cloning to set up and launch.
+
 Fast IDR and supervised U-Net denoising experiments on ImageNet and Marmousi2,
 trained on one NVIDIA RTX 5070 Ti (16 GB). Includes runnable code, experiment
 records, validation curves and inference examples.

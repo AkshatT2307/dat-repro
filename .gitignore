@@ -17,3 +17,5 @@ nohup.out
 repro/data/
 repro/runs/
 repro/logs/
+
+.venv*/

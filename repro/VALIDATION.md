@@ -102,3 +102,20 @@ are ongoing, not yet validated scientific results.
   files are tracked. Largest tracked file is below 6 MB.
 - Code license and upstream revision preserved. Absolute workstation paths in
   text artifacts normalized for portability; historical hashes are unchanged.
+
+## Batch-4 fixed 50,000-step protocol
+
+- Added train_steps50k.py as a separate driver; historical trainers/configurations
+  and results are unchanged. Four fresh runs, 128px, batch 4, exactly 50,000 updates,
+  LR milestones 25,000/40,000. Validation every 2,500, with no early stopping.
+- Short CPU integration runs passed for both datasets and both methods. Exact
+  network/teacher/Adam/scheduler resume verified at epoch boundaries, mid-epoch,
+  and before pending final validation. Completed resumes add no optimizer updates.
+- All 15 existing CPU unit tests still pass. Shell syntax/help and both dataset
+  dry-run budgets verified. Combined report and curves tested using isolated fixtures.
+- GPU benchmark: 20 warmup + 200 measured batch-4 steps for each configuration,
+  actual data loaders, FP32, Fast IDR teacher active. Models discarded. Timing
+  estimates saved in reports/steps50k_b4_128/timing.json.
+- Fresh-machine bootstrap prepared, but not executed end-to-end on a new host;
+  downloads and new-host driver compatibility remain environment-dependent.
+- No production 50,000-step run was launched during preparation.

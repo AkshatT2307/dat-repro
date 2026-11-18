@@ -1,3 +1,5 @@
+> New fixed-update protocol: [RUN_STEPS50K.md](RUN_STEPS50K.md).
+
 > For the completed experiments and portable setup, start with the [repository README](../README.md). The fixed-step instructions below are historical.
 
 # Latest instructions
