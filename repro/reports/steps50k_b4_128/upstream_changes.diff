@@ -1,0 +1,120 @@
+--- IDR/dataset/__init__.py
++++ repro/dataset/__init__.py
+@@ -8,7 +8,7 @@
+ 
+ data_folder = osp.dirname(osp.abspath(__file__))
+ dataset_filenames = [
+-    osp.splitext(osp.basename(v))[0] for v in scandir(data_folder) if '__init__' not in v
++    osp.splitext(osp.basename(v))[0] for v in scandir(data_folder) if v.endswith('.py') and '__init__' not in v
+     # if v.endswith('_dataset.py')
+ ]
+ # import all the dataset modules
+--- IDR/dataset/imagefolder.py
++++ repro/dataset/imagefolder.py
+@@ -12,7 +12,7 @@
+ try:
+     import mc
+ except:
+-    print('** import mc error')
++    # Optional cluster-only memcached client; local runs use mc=False.
+     pass
+ 
+ 
+@@ -81,6 +81,7 @@
+     def __init__(self, path, **kwargs):
+         self.root_dir = path  # root_dir
+         self.size = kwargs['crop_size']
++        self.output_size = kwargs.get('output_size', self.size)
+         self.repeat = int(kwargs['repeat'])
+         self.mc = kwargs['mc']
+         self.aug = kwargs['aug']
+@@ -90,16 +91,10 @@
+         self.rank = int(os.environ.get('SLURM_PROCID', default=0))
+ 
+         # self.rank = link.get_rank()
+-        def check_img_type(item):
+-            return '.jpg' in item.lower() or '.png' in item.lower() or '.bmp' in item.lower() or '.JPEG'
+-
+-        if isinstance(self.root_dir, list):
+-            lines = []
+-            for one_dir in self.root_dir:
+-                lines += [os.path.join(one_dir, item) for item in os.listdir(one_dir) if check_img_type(item)]
+-
+-        else:
+-            lines = [os.path.join(self.root_dir, item) for item in os.listdir(self.root_dir) if check_img_type(item)]
++        from pathlib import Path
++        roots = self.root_dir if isinstance(self.root_dir, list) else [self.root_dir]
++        lines = sorted(str(p) for root in roots for p in Path(root).rglob('*')
++                       if p.is_file() and p.suffix.lower() in {'.jpg', '.jpeg', '.png', '.bmp'})
+         assert len(lines) > 0
+ 
+         if self.rank == 0:
+@@ -149,6 +144,11 @@
+         # random crop 256
+         img = np.array(img, dtype=float)
+         img = random_crop(img, self.size)
++        # Downsample the clean/reference crop BEFORE trainer-generated noise.
++        # getattr preserves compatibility with already-created dataset instances.
++        output_size = getattr(self, 'output_size', self.size)
++        if output_size != self.size:
++            img = cv2.resize(img, (output_size, output_size), interpolation=cv2.INTER_AREA)
+ 
+         if self.aug:
+             mode = np.random.randint(8)
+--- IDR/models/__init__.py
++++ repro/models/__init__.py
+@@ -6,7 +6,7 @@
+ 
+ arch_folder = osp.dirname(osp.abspath(__file__))
+ 
+-arch_filenames = [item.replace('.py', '') for item in os.listdir(arch_folder) if '__init' not in item]
++arch_filenames = [item.replace('.py', '') for item in os.listdir(arch_folder) if item.endswith('.py') and item != '__init__.py']
+ 
+ # import all the arch modules
+ _arch_modules = [importlib.import_module(f'models.{file_name}') for file_name in arch_filenames]
+--- IDR/test.py
++++ repro/test.py
+@@ -14,7 +14,7 @@
+     h, w, _ = noisy.shape
+     pw, ph = (w + 31) // 32 * 32 - w, (h + 31) // 32 * 32 - h
+     with torch.no_grad():
+-        input_var = torch.FloatTensor([noisy]).cuda().permute(0, 3, 1, 2)
++        input_var = torch.from_numpy(np.ascontiguousarray(noisy, dtype=np.float32)).unsqueeze(0).cuda().permute(0, 3, 1, 2)
+         input_var = F.pad(input_var, (0, pw, 0, ph), mode='reflect')
+         # print(input_var.shape,  noisy.shape, ph, pw)
+         out_var = net(input_var)
+--- IDR/trainer/base_trainer.py
++++ repro/trainer/base_trainer.py
+@@ -55,6 +55,8 @@
+ 
+     def model_to_device(self, net):
+         net = net.cuda()  # move to cuda first, then call distributed data parallel.
++        if not self.cfg.dist:
++            return net
+         net = torch.nn.parallel.DistributedDataParallel(net, device_ids=[torch.cuda.current_device()],
+                                                         output_device=self.cfg.rank,
+                                                         find_unused_parameters=self.cfg.find_unused_params)
+--- IDR/utils/util.py
++++ repro/utils/util.py
+@@ -267,7 +267,8 @@
+ def add_noise(input_var, cfg, *args):
+     noise_type = cfg.noise_type
+     noise_level = cfg.noise_level
+-    assert input_var.is_cuda
++    if noise_type != 'g':
++        assert input_var.is_cuda
+ 
+     if noise_type == 'g':
+         if isinstance(noise_level, list):  # random noise level
+@@ -278,9 +279,9 @@
+             assert NotImplementedError
+ 
+         if not cfg.mixed_batch_nl:
+-            noise = torch.cuda.FloatTensor(input_var.shape).normal_(0, sigma[0])
++            noise = torch.empty(input_var.shape, dtype=torch.float32, device=input_var.device).normal_(0, sigma[0])
+         else:
+-            noise = torch.cuda.FloatTensor(input_var.shape)
++            noise = torch.empty(input_var.shape, dtype=torch.float32, device=input_var.device)
+             for idx in range(input_var.shape[0]):
+                 noise[idx].normal_(0, sigma[idx])
+         input_noise = input_var + noise

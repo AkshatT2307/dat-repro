@@ -1,0 +1,40 @@
+{
+  "dataset": "marmousi2",
+  "method": "idr",
+  "data": "data/marmousi2",
+  "output": "runs/steps50k_b4_128/marmousi2/idr",
+  "steps": 50000,
+  "workers": 4,
+  "seed": 2026,
+  "validation_count": 1000,
+  "validate_every": 2500,
+  "save_every": 1000,
+  "log_every": 250,
+  "device": "cuda",
+  "resume": false,
+  "dry_run": false,
+  "smoke_test": false,
+  "protocol": "steps50k_b4_128",
+  "batch": 4,
+  "output_size": 128,
+  "training_samples": 50000,
+  "steps_per_epoch": 12500,
+  "expected_sample_presentations": 200000,
+  "epochs_equivalent": 4.0,
+  "split_fingerprint": "378395fb72a61ce83cb31cb0c9e130be426bd33e4638f7894af7e6eec7917080",
+  "lr": 0.0003,
+  "milestones": [
+    25000,
+    40000
+  ],
+  "early_stopping": false,
+  "teacher_refresh": "once per data-loader epoch, starting at epoch 2",
+  "noise_model": "AWGN; one sigma per batch and noise-generation call",
+  "noise_range": [
+    0,
+    0.5
+  ],
+  "precision": "FP32; TF32 disabled",
+  "torch": "2.7.1+cu128",
+  "gpu": "NVIDIA GeForce RTX 5070 Ti"
+}

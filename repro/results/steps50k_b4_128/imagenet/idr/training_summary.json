@@ -1,0 +1,10 @@
+{
+  "completed_steps": 50000,
+  "completed_epochs": 4,
+  "partial_epoch_batches": 1000,
+  "best_loss": 0.030165856850333513,
+  "best_step": 50000,
+  "early_stopping": false,
+  "final_weights": "runs/steps50k_b4_128/imagenet/idr/weights.pth",
+  "best_weights": "runs/steps50k_b4_128/imagenet/idr/best_weights.pth"
+}

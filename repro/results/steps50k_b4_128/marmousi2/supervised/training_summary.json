@@ -1,0 +1,10 @@
+{
+  "completed_steps": 50000,
+  "completed_epochs": 4,
+  "partial_epoch_batches": 0,
+  "best_loss": 0.05066542011050005,
+  "best_step": 32500,
+  "early_stopping": false,
+  "final_weights": "runs/steps50k_b4_128/marmousi2/supervised/weights.pth",
+  "best_weights": "runs/steps50k_b4_128/marmousi2/supervised/best_weights.pth"
+}

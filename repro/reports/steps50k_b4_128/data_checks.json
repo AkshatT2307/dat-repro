@@ -1,0 +1,13 @@
+{
+  "idr": {
+    "train_count": 49000,
+    "validation_count": 1000,
+    "overlap": 0
+  },
+  "supervised": {
+    "train_count": 49000,
+    "validation_count": 1000,
+    "overlap": 0
+  },
+  "paper_pdf_sha256": "20cb2741515ac51b996804fc21145f231c4c52cf0ef4e2fb192f6e8c12e71720"
+}

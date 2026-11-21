@@ -1,0 +1,30 @@
+{
+  "weights": "runs/steps50k_b4_128/imagenet/supervised/weights.pth",
+  "seed": 2026,
+  "results": [
+    {
+      "dataset": "kodak",
+      "sigma": 25,
+      "psnr": 31.90511931314737,
+      "ssim": 0.8741449361300687
+    },
+    {
+      "dataset": "kodak",
+      "sigma": 50,
+      "psnr": 28.76929106292982,
+      "ssim": 0.7832347050083949
+    },
+    {
+      "dataset": "BSDS300",
+      "sigma": 25,
+      "psnr": 31.122926120481825,
+      "ssim": 0.8817896962632676
+    },
+    {
+      "dataset": "BSDS300",
+      "sigma": 50,
+      "psnr": 27.877576770731054,
+      "ssim": 0.7852535469083745
+    }
+  ]
+}

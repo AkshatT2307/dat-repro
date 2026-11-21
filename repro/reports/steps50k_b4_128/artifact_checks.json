@@ -1,0 +1,98 @@
+[
+  {
+    "dataset": "imagenet",
+    "method": "idr",
+    "completed_steps": 50000,
+    "adam_steps": 50000,
+    "metrics_rows": 50000,
+    "duplicate_rows": 0,
+    "all_finite": true,
+    "all_batches_four": true,
+    "lr_schedule_verified": true,
+    "final_weights_match_checkpoint": true,
+    "best_step": 50000,
+    "teacher_epoch": 4,
+    "wall_span_minutes": 23.598198833333335,
+    "first_update_utc": "2026-11-18T16:31:46.151550+00:00",
+    "last_update_utc": "2026-11-18T16:55:22.043480+00:00",
+    "sha256": {
+      "config.json": "9589ca4a56799d1f57b1beb0a4b996ddbf037220fc530db5d73af578313f5609",
+      "latest.pt": "29f454e41100d375da814c1c812d334194f5ef9cd60fa953e13a2cd0f19ddc4a",
+      "best.pt": "a59876c6fd5403bfa61bebcbf8a2d03681d3f7d440aaa0c253577562ae40ebc5",
+      "weights.pth": "93c8cc6043def26b1bc5e7ff95955bd49ad75a00a5d7f6470ca8ab130a14b874",
+      "best_weights.pth": "4cb3054e0b2a6aa720d7ba55c20ac66b93de37eb485a0cee69c844e5c1b7f8c5"
+    }
+  },
+  {
+    "dataset": "imagenet",
+    "method": "supervised",
+    "completed_steps": 50000,
+    "adam_steps": 50000,
+    "metrics_rows": 50947,
+    "duplicate_rows": 947,
+    "all_finite": true,
+    "all_batches_four": true,
+    "lr_schedule_verified": true,
+    "final_weights_match_checkpoint": true,
+    "best_step": 47500,
+    "teacher_epoch": null,
+    "wall_span_minutes": 35.37062015,
+    "first_update_utc": "2026-11-18T16:56:43.639704+00:00",
+    "last_update_utc": "2026-11-18T17:32:05.876913+00:00",
+    "sha256": {
+      "config.json": "9597664ceb499d3b4b93650d693a182b709411a7f152bacfb400f565f0669e59",
+      "latest.pt": "029b22e262bae799e3e2eee1482c38640ce509b5176eca732ea1472231152ff2",
+      "best.pt": "3645c21672578442f58676af32c33a70e1f3e89e18fd09055db2515540ce12ea",
+      "weights.pth": "9e255bb4167fc47fef12db55c91b1e0edafb04f02604ce7d8cde549058b3d9fe",
+      "best_weights.pth": "e82219126b10519bb04f1063ecd221c7eaef1a1a241f21310fd0eb7c17b8d9a9"
+    }
+  },
+  {
+    "dataset": "marmousi2",
+    "method": "idr",
+    "completed_steps": 50000,
+    "adam_steps": 50000,
+    "metrics_rows": 50000,
+    "duplicate_rows": 0,
+    "all_finite": true,
+    "all_batches_four": true,
+    "lr_schedule_verified": true,
+    "final_weights_match_checkpoint": true,
+    "best_step": 47500,
+    "teacher_epoch": 3,
+    "wall_span_minutes": 25.644728983333334,
+    "first_update_utc": "2026-11-18T17:00:24.001996+00:00",
+    "last_update_utc": "2026-11-18T17:26:02.685735+00:00",
+    "sha256": {
+      "config.json": "51a01bcedc52f4afd50775beed8f889d2c20bfb13f2c25aaabbe21d998b01736",
+      "latest.pt": "1b991d390b0e598ea4340ef1c840007647322364f491d205a76948bb2d3a0007",
+      "best.pt": "607cfd65e3f09a8abc295abb371c31a4b18d1ff3f0eb21b9b6e41608e18adf90",
+      "weights.pth": "ee132155d2e0b892b085a1275046af72f14d35b32f19991fd55a1210ca017de7",
+      "best_weights.pth": "fb8bbb02fab92b0dde81dbcb336766dcc3d899807292e40f8805a7432a4cb514"
+    }
+  },
+  {
+    "dataset": "marmousi2",
+    "method": "supervised",
+    "completed_steps": 50000,
+    "adam_steps": 50000,
+    "metrics_rows": 50000,
+    "duplicate_rows": 0,
+    "all_finite": true,
+    "all_batches_four": true,
+    "lr_schedule_verified": true,
+    "final_weights_match_checkpoint": true,
+    "best_step": 32500,
+    "teacher_epoch": null,
+    "wall_span_minutes": 23.14039528333333,
+    "first_update_utc": "2026-11-18T17:00:12.866439+00:00",
+    "last_update_utc": "2026-11-18T17:23:21.290156+00:00",
+    "sha256": {
+      "config.json": "26e489eefca36877b5e9439b0bfadeaa30391a66d7e1be235692451685c3662c",
+      "latest.pt": "292da12379cd16ea914b07d85a7765b66e406ad73380542bfd82893132cc5564",
+      "best.pt": "b7368a3d463bd336aa3cbd7b21cc9448a686d6a39acfc0fd8f5bda660904f315",
+      "weights.pth": "597da3283974efe8742b86ec4641821cdaec6abe69afc335d3d7dfa3ea14755d",
+      "best_weights.pth": "8be33fa6689ac2daefe65380ed7906a93cc83c6524c396ba9213603a1a3ced90"
+    }
+  }
+]

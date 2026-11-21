@@ -1,0 +1,8 @@
+{
+  "python": "3.13.12 | packaged by Anaconda, Inc. | (main, Feb 24 2026, 16:13:31) [GCC 14.3.0]",
+  "torch": "2.7.1+cu128",
+  "numpy": "2.2.6",
+  "opencv": "4.11.0",
+  "skimage": "0.25.2",
+  "note": "Current audit environment; training config separately records torch and GPU."
+}

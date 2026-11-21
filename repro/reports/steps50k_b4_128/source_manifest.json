@@ -1,0 +1,338 @@
+[
+  {
+    "path": "benchmark_steps50k.py",
+    "sha256": "efbcf7e68c7a733ace9a63810339eeaf8cbddeda3e2f916ae16ce993b720064f",
+    "mtime_utc": "2026-11-18T16:17:11.921131+00:00",
+    "matches_published": true,
+    "upstream_identical": false
+  },
+  {
+    "path": "compare_epoch128.py",
+    "sha256": "f8aee646a71717c2fef5a720c55d62292dbafbb7efc3b1af2ee8389fdd027417",
+    "mtime_utc": "2026-11-17T19:24:08.513613+00:00",
+    "matches_published": true,
+    "upstream_identical": false
+  },
+  {
+    "path": "configs/__init__.py",
+    "sha256": "d3de7fef3de89cd3f52f6ad4707b31b90f5dc87c606738a1e588249c36102387",
+    "mtime_utc": "2026-11-17T13:50:19.875092+00:00",
+    "matches_published": true,
+    "upstream_identical": true
+  },
+  {
+    "path": "configs/synthetic_config.py",
+    "sha256": "1e87becc1f089dd483e6236e568e7305a14667413d48dd40b3467d15dd7e073a",
+    "mtime_utc": "2026-11-17T13:50:19.875131+00:00",
+    "matches_published": true,
+    "upstream_identical": true
+  },
+  {
+    "path": "continue_training.py",
+    "sha256": "c820628c3bab60652d72e1be58c6959937e6a2f5d812ab0657f77503269393a2",
+    "mtime_utc": "2026-11-18T07:02:32.894876+00:00",
+    "matches_published": true,
+    "upstream_identical": false
+  },
+  {
+    "path": "dataset/__init__.py",
+    "sha256": "3edefbc29cdeda108ceb0a4c4a90e296ba36c99574ae0579da089379d9e9f186",
+    "mtime_utc": "2026-11-17T13:51:01.965047+00:00",
+    "matches_published": true,
+    "upstream_identical": false
+  },
+  {
+    "path": "dataset/data_sampler.py",
+    "sha256": "db6c219dec8b64ea208b04faf1056d02ae4c9d0641e5f35fb8cc5867c6c8ce4d",
+    "mtime_utc": "2026-11-17T13:50:19.874552+00:00",
+    "matches_published": true,
+    "upstream_identical": true
+  },
+  {
+    "path": "dataset/imagefolder.py",
+    "sha256": "4ee50aa3663c4b341466d0db48b240a9c792db49ebc7fd2bb4ff9ca3964a1e91",
+    "mtime_utc": "2026-11-17T19:00:28.344283+00:00",
+    "matches_published": true,
+    "upstream_identical": false
+  },
+  {
+    "path": "dataset/prefetcher.py",
+    "sha256": "2145fcaa91d66d1b0c492ee021004c61635c21e954697108494ae3420cdf6500",
+    "mtime_utc": "2026-11-17T13:50:19.874642+00:00",
+    "matches_published": false,
+    "upstream_identical": true
+  },
+  {
+    "path": "download_imagenet.py",
+    "sha256": "fdeaa3914bdb9a35d8d004925aaad0824841ad28531dcf8c580d0d21f47e5be6",
+    "mtime_utc": "2026-11-17T14:18:47.229439+00:00",
+    "matches_published": true,
+    "upstream_identical": false
+  },
+  {
+    "path": "epoch_protocol.py",
+    "sha256": "feddd22b4e5ff32f83d9c2e3948ba19c9e71decdf6267d8f4b25a33333c0694d",
+    "mtime_utc": "2026-11-17T19:17:15.785127+00:00",
+    "matches_published": true,
+    "upstream_identical": false
+  },
+  {
+    "path": "evaluate.py",
+    "sha256": "86758f445472b65c83fe82c70ed6355d1123867455c5c686e7dacf89d8fdf001",
+    "mtime_utc": "2026-11-17T13:52:44.376010+00:00",
+    "matches_published": true,
+    "upstream_identical": false
+  },
+  {
+    "path": "evaluate_seismic.py",
+    "sha256": "24d77d113c386b87d85c0d0ca508177f1b5dc84fccf3c5dd7fb25db838a30c36",
+    "mtime_utc": "2026-11-17T19:21:58.993197+00:00",
+    "matches_published": true,
+    "upstream_identical": false
+  },
+  {
+    "path": "experiment_profiles.py",
+    "sha256": "6abb2abc3185ce456c5e8662dfaff5f9e1461ca9cc556b513a8308554940dcad",
+    "mtime_utc": "2026-11-17T19:36:21.829108+00:00",
+    "matches_published": true,
+    "upstream_identical": false
+  },
+  {
+    "path": "gaussian.py",
+    "sha256": "124375371d525fe2db14632ac7c3f4177f1581dbb1e8c206bf9a4827b2acfb17",
+    "mtime_utc": "2026-11-18T07:03:38.878206+00:00",
+    "matches_published": true,
+    "upstream_identical": false
+  },
+  {
+    "path": "imagenet_split.py",
+    "sha256": "c084768ea7dfd9f811509393cd9fdee162e6eb5bf63aac849717cd3720fe8df5",
+    "mtime_utc": "2026-11-17T19:36:21.807324+00:00",
+    "matches_published": true,
+    "upstream_identical": false
+  },
+  {
+    "path": "inference_examples.py",
+    "sha256": "bcd09e8f528d22f99456be6252a2ccb434e16e514607e31d64deb3d9a0eae6f2",
+    "mtime_utc": "2026-11-18T08:15:48.456236+00:00",
+    "matches_published": true,
+    "upstream_identical": false
+  },
+  {
+    "path": "models/__init__.py",
+    "sha256": "1a2998b0c08ae4d4e984edad8c236dc1e02a627d024093e1e2bcea8cc3004ec2",
+    "mtime_utc": "2026-11-17T13:51:01.963473+00:00",
+    "matches_published": true,
+    "upstream_identical": false
+  },
+  {
+    "path": "models/unet.py",
+    "sha256": "d2aaef04d06e7df2d03318fe2823d9394f59789b684f7624b7558b0a656ddab5",
+    "mtime_utc": "2026-11-17T13:50:19.874269+00:00",
+    "matches_published": true,
+    "upstream_identical": true
+  },
+  {
+    "path": "monitor_overnight.py",
+    "sha256": "9ca988409d0a14236b9fef154d116d03d238e1ed6eb845e7133cf3a0cd8456a4",
+    "mtime_utc": "2026-11-17T19:58:58.870098+00:00",
+    "matches_published": true,
+    "upstream_identical": false
+  },
+  {
+    "path": "notify_four_complete.py",
+    "sha256": "16ea3ea63eedc9704d817a530c642f7fb6aea8bea342e1a9555633e6130ac5b3",
+    "mtime_utc": "2026-11-18T07:08:52.509561+00:00",
+    "matches_published": true,
+    "upstream_identical": false
+  },
+  {
+    "path": "plot_continuations.py",
+    "sha256": "2a8592afe38bb040e5d8a0dfad576b229e36c54bba1a9e4fd4c7e08b343c4614",
+    "mtime_utc": "2026-11-18T07:08:25.333564+00:00",
+    "matches_published": true,
+    "upstream_identical": false
+  },
+  {
+    "path": "plot_validation.py",
+    "sha256": "91b1d25f2e353e9ef89a81929f8bbb5abd4088b2b3298a9913e3b301b02ea81c",
+    "mtime_utc": "2026-11-18T06:58:31.081598+00:00",
+    "matches_published": true,
+    "upstream_identical": false
+  },
+  {
+    "path": "prepare_data.py",
+    "sha256": "962a4f7f0f9a93cc21b48092dab679aa375d59e50d28e72adce2a6689bd85b5d",
+    "mtime_utc": "2026-11-17T13:52:44.379011+00:00",
+    "matches_published": true,
+    "upstream_identical": false
+  },
+  {
+    "path": "prepare_seismic.py",
+    "sha256": "dfbacf94b5704f064ed4b73ab71af46c33b54ab6026c0d956b62fb654c1dc0b7",
+    "mtime_utc": "2026-11-17T19:17:44.547253+00:00",
+    "matches_published": true,
+    "upstream_identical": false
+  },
+  {
+    "path": "run_continuations.py",
+    "sha256": "aab7ee5bc6caa49c32dc37f286c285b0f9e18cf4e589f5f24e70bcbac377ab6d",
+    "mtime_utc": "2026-11-18T07:03:06.592063+00:00",
+    "matches_published": true,
+    "upstream_identical": false
+  },
+  {
+    "path": "seismic_data.py",
+    "sha256": "c6de7ebf0ed1a62c0796e6ad9e481a20d90d2a097d75463bb68f9f609dea25d3",
+    "mtime_utc": "2026-11-17T19:17:15.788127+00:00",
+    "matches_published": true,
+    "upstream_identical": false
+  },
+  {
+    "path": "summarize_steps50k.py",
+    "sha256": "935f28f492d84b48941c28a56dbb2d38680494c91981e686bc516554d51bc4d2",
+    "mtime_utc": "2026-11-18T16:18:13.712648+00:00",
+    "matches_published": true,
+    "upstream_identical": false
+  },
+  {
+    "path": "test.py",
+    "sha256": "944417ee0d44b3090750c9227ec68d889394327b901ef498577ddc42ab96e858",
+    "mtime_utc": "2026-11-17T13:56:15.654491+00:00",
+    "matches_published": true,
+    "upstream_identical": false
+  },
+  {
+    "path": "tests/check_epoch_resume.py",
+    "sha256": "06d28c0b966c44003d67eb6167474f936508773b0ba9dda9e713781ee3bdcc1f",
+    "mtime_utc": "2026-11-17T19:22:58.233447+00:00",
+    "matches_published": true,
+    "upstream_identical": false
+  },
+  {
+    "path": "tests/check_steps50k_resume.py",
+    "sha256": "4d319d412ba73d491d4c0db30b758b3e403faf73a83675d571d389f51f52707b",
+    "mtime_utc": "2026-11-18T16:18:58.277458+00:00",
+    "matches_published": true,
+    "upstream_identical": false
+  },
+  {
+    "path": "tests/check_validation_resume.py",
+    "sha256": "b9e766d6aef0ef3c5509391a4297b4804e5bf1d5d3503d56f9b244d20950b6f3",
+    "mtime_utc": "2026-11-17T19:40:10.368696+00:00",
+    "matches_published": true,
+    "upstream_identical": false
+  },
+  {
+    "path": "tests/test_compact.py",
+    "sha256": "2119e7fc0c4126f63a6468a35e5506687fcdcb01196e4a4a6d91f831fe33fe3c",
+    "mtime_utc": "2026-11-17T19:01:02.977958+00:00",
+    "matches_published": true,
+    "upstream_identical": false
+  },
+  {
+    "path": "tests/test_epoch_seismic.py",
+    "sha256": "37932528dfc829cef7c03d31b084947137ba8439b5112c661d3179fbd8e5460b",
+    "mtime_utc": "2026-11-17T19:21:08.255187+00:00",
+    "matches_published": true,
+    "upstream_identical": false
+  },
+  {
+    "path": "tests/test_overnight.py",
+    "sha256": "729fa0aaa21e5fc77daf02131c01cff5a2713ee7770111f98f9e649551a1c3ff",
+    "mtime_utc": "2026-11-17T19:53:01.767787+00:00",
+    "matches_published": true,
+    "upstream_identical": false
+  },
+  {
+    "path": "tests/test_validation.py",
+    "sha256": "fd737a5f40cbae598cf5a030d2a920f011caea6805926a59ac3de6694f0778d6",
+    "mtime_utc": "2026-11-17T19:36:53.158774+00:00",
+    "matches_published": true,
+    "upstream_identical": false
+  },
+  {
+    "path": "train.py",
+    "sha256": "4450327779fce855ea0b503cc13c14b7fffd947158b02f4fe192200878bd2aea",
+    "mtime_utc": "2026-11-17T13:50:19.875694+00:00",
+    "matches_published": true,
+    "upstream_identical": true
+  },
+  {
+    "path": "train_steps50k.py",
+    "sha256": "df46a9b7541d1f66dc0eb91f0e4f6ee402a3fb60540baececfcfcb25a861cbfb",
+    "mtime_utc": "2026-11-18T16:20:53.455123+00:00",
+    "matches_published": true,
+    "upstream_identical": false
+  },
+  {
+    "path": "trainer/__init__.py",
+    "sha256": "a7179f9cb1c226cf60e702cb61b13d77d6ed5af57c6e3981e9911c7ee9434c3f",
+    "mtime_utc": "2026-11-17T13:50:19.874370+00:00",
+    "matches_published": true,
+    "upstream_identical": true
+  },
+  {
+    "path": "trainer/base_trainer.py",
+    "sha256": "2adfce3dd344ad799c0107c4852db227d89234cd40c1d4143bc8fff65ee942cd",
+    "mtime_utc": "2026-11-17T13:54:16.555791+00:00",
+    "matches_published": true,
+    "upstream_identical": false
+  },
+  {
+    "path": "training_display.py",
+    "sha256": "9b922617ab6b5ddcc707b8eaf13850f15acf5c5d913e0b8653726badc13ffe51",
+    "mtime_utc": "2026-11-18T07:03:38.930208+00:00",
+    "matches_published": true,
+    "upstream_identical": false
+  },
+  {
+    "path": "utils/__init__.py",
+    "sha256": "e20d1aa48f3eddd8b27dd05a04eb7a54a6345865d32bc169c9b6cd4cc1cd476a",
+    "mtime_utc": "2026-11-17T13:50:19.874733+00:00",
+    "matches_published": false,
+    "upstream_identical": true
+  },
+  {
+    "path": "utils/dist_util.py",
+    "sha256": "270c4ab00c9da53624418db2d1b1b37b07484b1b72286f40531ac1fef349dcbf",
+    "mtime_utc": "2026-11-17T13:50:19.874774+00:00",
+    "matches_published": true,
+    "upstream_identical": true
+  },
+  {
+    "path": "utils/n2s.py",
+    "sha256": "0f6fa758bf1a39d830f50d256ca01b3debaa92865c1824b6fd5c3707aaa40018",
+    "mtime_utc": "2026-11-17T13:50:19.874815+00:00",
+    "matches_published": false,
+    "upstream_identical": true
+  },
+  {
+    "path": "utils/n2v.py",
+    "sha256": "e27c22050146d33747cf9544d765911cd3b34d6a11858f334cea0f643f284ed3",
+    "mtime_utc": "2026-11-17T13:50:19.874855+00:00",
+    "matches_published": true,
+    "upstream_identical": true
+  },
+  {
+    "path": "utils/registry.py",
+    "sha256": "6830b1a410f59966254afe067cc635a78f1f952707744e5ff1fb4b32598188ec",
+    "mtime_utc": "2026-11-17T13:50:19.874900+00:00",
+    "matches_published": false,
+    "upstream_identical": true
+  },
+  {
+    "path": "utils/util.py",
+    "sha256": "29cbd82127f5cc26d8f2b1fee5f32c5c2aed3178f815bb707d803e84712275d5",
+    "mtime_utc": "2026-11-17T19:19:00.740664+00:00",
+    "matches_published": true,
+    "upstream_identical": false
+  },
+  {
+    "path": "validation.py",
+    "sha256": "288f1a584a27d46b98de72f872e393f600991c2dbef1a6649c6a28254565680d",
+    "mtime_utc": "2026-11-17T19:39:27.341775+00:00",
+    "matches_published": true,
+    "upstream_identical": false
+  }
+]
