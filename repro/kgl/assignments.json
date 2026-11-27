@@ -1,0 +1,34 @@
+{
+ "acc3": [
+  "S_m2_idr_sg_s0",
+  "eval_S_m2_idr_sg_s0",
+  "S_ot_idr_sg_s0",
+  "eval_S_ot_idr_sg_s0",
+  "S_sa_idr_sg_s0",
+  "eval_S_sa_idr_sg_s0"
+ ],
+ "acc4": [
+  "S_m2_sup_sg_s0",
+  "eval_S_m2_sup_sg_s0",
+  "S_ot_sup_sg_s0",
+  "eval_S_ot_sup_sg_s0",
+  "S_sa_sup_sg_s0",
+  "eval_S_sa_sup_sg_s0"
+ ],
+ "acc5": [
+  "S_m2_idr_sb_s0",
+  "eval_S_m2_idr_sb_s0",
+  "S_ot_idr_sb_s0",
+  "eval_S_ot_idr_sb_s0",
+  "S_sa_idr_sb_s0",
+  "eval_S_sa_idr_sb_s0"
+ ],
+ "acc6": [
+  "S_m2_sup_sb_s0",
+  "eval_S_m2_sup_sb_s0",
+  "S_ot_sup_sb_s0",
+  "eval_S_ot_sup_sb_s0",
+  "S_sa_sup_sb_s0",
+  "eval_S_sa_sup_sb_s0"
+ ]
+}
