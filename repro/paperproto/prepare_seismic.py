@@ -184,6 +184,22 @@ def stratton():
           mad_sigma_median=float(np.median(sig)))
 
 
+def line2d(key, path, desc, kind, train_frac=0.7, guard=256, test_w=512):
+    """Single post-stack 2-D field line: train on the first part, guard band, test sections after it."""
+    a, hdr = read_segy(RAW / path)
+    a = np.asarray(a, np.float32)                       # (time, trace)
+    dt = hdr['sample_interval_header'] / 1e6            # microseconds in the binary header
+    live_t = np.where(np.abs(a).sum(1) > 0)[0]          # trim all-zero samples at the end
+    a = a[: live_t[-1] + 1]
+    n = a.shape[1]; ntr = int(n * train_frac)
+    train, _ = unit_rms(a[:, :ntr])
+    tests = [unit_rms(a[:, s:s + test_w])[0] for s in range(ntr + guard, n - test_w + 1, test_w)]
+    sig = [mad_sigma(train[:, s:s + 512]) for s in range(0, ntr - 511, 512)]
+    write(key, train[None], np.stack(tests), dt=dt, survey=desc, kind=kind,
+          note=f'single line {a.shape}; train traces [0,{ntr}), guard {guard}, test sections of {test_w} traces',
+          mad_sigma_median=float(np.median(sig)), raw_file=str(path))
+
+
 # ------------------------------------------------------------------ fixed noisy realisations
 def fixed(key, noise, seed):
     sys.path.insert(0, str(ROOT / 'paperproto'))
@@ -215,6 +231,10 @@ if __name__ == '__main__':
         elif w == 'sa': synthetic('sa', load_sa, np.arange(0, 470, 2), np.arange(540, 676, 15), 'SEG/EAGE 3-D Salt (marine)')
         elif w == 'f3': f3()
         elif w == 'st': stratton()
+        elif w == 'l2': line2d('l2', 'npra/R_1.SGY', 'USGS NPR-A Alaska regional line 1 (OFR 00-286), stacked + migrated',
+                               'land 2-D field (post-stack migrated), real noise; no clean reference')
+        elif w == 'w2': line2d('w2', 'namss/WS82-611__5692.sgy', 'USGS NAMSS W-34-82-MB line WS82-611 (Gulf of Mexico), migrated',
+                               'marine 2-D field (post-stack migrated), real noise; no clean reference')
         elif w.startswith('fixed:'):
             _, key, noise, seed = w.split(':'); fixed(key, noise, int(seed))
         else: raise SystemExit(w)

@@ -106,15 +106,17 @@ def task(args):
 def main():
     p = argparse.ArgumentParser(); p.add_argument('--procs', type=int, default=10)
     p.add_argument('--noises', default='sg,sb,ss,sd'); p.add_argument('--out', default='runs/paperproto/baselines_seis')
+    p.add_argument('--tests', default=None, help='comma list (default: corpus tests)')
+    p.add_argument('--methods', default=None, help='comma list filter, e.g. bandpass,fx')
     a = p.parse_args()
     tasks = []
     for noise in a.noises.split(','):
-        for key in S.CORPUS_TESTS:
+        for key in (a.tests.split(',') if a.tests else S.CORPUS_TESTS):
             n = len(S.load_test(key)[0])
             for level in S.LEVELS[noise]:
                 for seed in S.TEST_SEEDS:
                     for i in range(n):
-                        for m in METHODS[noise]:
+                        for m in [m for m in METHODS[noise] if not a.methods or m in a.methods.split(',')]:
                             tasks.append((key, i, noise, level, seed, m))
     tasks.sort(key=lambda t: t[-1] != 'bm3d')   # longest first
     print(len(tasks), 'tasks', flush=True)

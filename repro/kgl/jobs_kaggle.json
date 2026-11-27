@@ -1,0 +1,2329 @@
+[
+ {
+  "id": "S_m2_idr_sg_s0",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/S_m2_idr_sg_s0",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "m2",
+   "--method",
+   "idr",
+   "--noise",
+   "sg",
+   "--seed",
+   "0"
+  ],
+  "done_file": "runs/paperproto/S_m2_idr_sg_s0/training_summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 1.0,
+  "group": "S_m2_idr_sg_s0"
+ },
+ {
+  "id": "eval_S_m2_idr_sg_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_m2_idr_sg_s0",
+   "--tests",
+   "m2,m2_prestm,m2_postm,m2_srme,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_m2_idr_sg_s0/eval/summary.json",
+  "deps": [
+   "S_m2_idr_sg_s0"
+  ],
+  "env": {},
+  "cost": 0.08,
+  "group": "S_m2_idr_sg_s0"
+ },
+ {
+  "id": "S_m2_idr_sg_s1",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/S_m2_idr_sg_s1",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "m2",
+   "--method",
+   "idr",
+   "--noise",
+   "sg",
+   "--seed",
+   "1"
+  ],
+  "done_file": "runs/paperproto/S_m2_idr_sg_s1/training_summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 1.0,
+  "group": "S_m2_idr_sg_s1"
+ },
+ {
+  "id": "eval_S_m2_idr_sg_s1",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_m2_idr_sg_s1",
+   "--tests",
+   "m2,m2_prestm,m2_postm,m2_srme,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_m2_idr_sg_s1/eval/summary.json",
+  "deps": [
+   "S_m2_idr_sg_s1"
+  ],
+  "env": {},
+  "cost": 0.08,
+  "group": "S_m2_idr_sg_s1"
+ },
+ {
+  "id": "S_m2_idr_sg_s2",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/S_m2_idr_sg_s2",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "m2",
+   "--method",
+   "idr",
+   "--noise",
+   "sg",
+   "--seed",
+   "2"
+  ],
+  "done_file": "runs/paperproto/S_m2_idr_sg_s2/training_summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 1.0,
+  "group": "S_m2_idr_sg_s2"
+ },
+ {
+  "id": "eval_S_m2_idr_sg_s2",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_m2_idr_sg_s2",
+   "--tests",
+   "m2,m2_prestm,m2_postm,m2_srme,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_m2_idr_sg_s2/eval/summary.json",
+  "deps": [
+   "S_m2_idr_sg_s2"
+  ],
+  "env": {},
+  "cost": 0.08,
+  "group": "S_m2_idr_sg_s2"
+ },
+ {
+  "id": "S_m2_sup_sg_s0",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/S_m2_sup_sg_s0",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "m2",
+   "--method",
+   "sup",
+   "--noise",
+   "sg",
+   "--seed",
+   "0"
+  ],
+  "done_file": "runs/paperproto/S_m2_sup_sg_s0/training_summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 1.0,
+  "group": "S_m2_sup_sg_s0"
+ },
+ {
+  "id": "eval_S_m2_sup_sg_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_m2_sup_sg_s0",
+   "--tests",
+   "m2,m2_prestm,m2_postm,m2_srme,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_m2_sup_sg_s0/eval/summary.json",
+  "deps": [
+   "S_m2_sup_sg_s0"
+  ],
+  "env": {},
+  "cost": 0.08,
+  "group": "S_m2_sup_sg_s0"
+ },
+ {
+  "id": "S_m2_sup_sg_s1",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/S_m2_sup_sg_s1",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "m2",
+   "--method",
+   "sup",
+   "--noise",
+   "sg",
+   "--seed",
+   "1"
+  ],
+  "done_file": "runs/paperproto/S_m2_sup_sg_s1/training_summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 1.0,
+  "group": "S_m2_sup_sg_s1"
+ },
+ {
+  "id": "eval_S_m2_sup_sg_s1",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_m2_sup_sg_s1",
+   "--tests",
+   "m2,m2_prestm,m2_postm,m2_srme,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_m2_sup_sg_s1/eval/summary.json",
+  "deps": [
+   "S_m2_sup_sg_s1"
+  ],
+  "env": {},
+  "cost": 0.08,
+  "group": "S_m2_sup_sg_s1"
+ },
+ {
+  "id": "S_m2_sup_sg_s2",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/S_m2_sup_sg_s2",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "m2",
+   "--method",
+   "sup",
+   "--noise",
+   "sg",
+   "--seed",
+   "2"
+  ],
+  "done_file": "runs/paperproto/S_m2_sup_sg_s2/training_summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 1.0,
+  "group": "S_m2_sup_sg_s2"
+ },
+ {
+  "id": "eval_S_m2_sup_sg_s2",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_m2_sup_sg_s2",
+   "--tests",
+   "m2,m2_prestm,m2_postm,m2_srme,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_m2_sup_sg_s2/eval/summary.json",
+  "deps": [
+   "S_m2_sup_sg_s2"
+  ],
+  "env": {},
+  "cost": 0.08,
+  "group": "S_m2_sup_sg_s2"
+ },
+ {
+  "id": "S_m2_idr_sb_s0",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/S_m2_idr_sb_s0",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "m2",
+   "--method",
+   "idr",
+   "--noise",
+   "sb",
+   "--seed",
+   "0"
+  ],
+  "done_file": "runs/paperproto/S_m2_idr_sb_s0/training_summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 1.0,
+  "group": "S_m2_idr_sb_s0"
+ },
+ {
+  "id": "eval_S_m2_idr_sb_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_m2_idr_sb_s0",
+   "--tests",
+   "m2,m2_prestm,m2_postm,m2_srme,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_m2_idr_sb_s0/eval/summary.json",
+  "deps": [
+   "S_m2_idr_sb_s0"
+  ],
+  "env": {},
+  "cost": 0.08,
+  "group": "S_m2_idr_sb_s0"
+ },
+ {
+  "id": "S_m2_sup_sb_s0",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/S_m2_sup_sb_s0",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "m2",
+   "--method",
+   "sup",
+   "--noise",
+   "sb",
+   "--seed",
+   "0"
+  ],
+  "done_file": "runs/paperproto/S_m2_sup_sb_s0/training_summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 1.0,
+  "group": "S_m2_sup_sb_s0"
+ },
+ {
+  "id": "eval_S_m2_sup_sb_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_m2_sup_sb_s0",
+   "--tests",
+   "m2,m2_prestm,m2_postm,m2_srme,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_m2_sup_sb_s0/eval/summary.json",
+  "deps": [
+   "S_m2_sup_sb_s0"
+  ],
+  "env": {},
+  "cost": 0.08,
+  "group": "S_m2_sup_sb_s0"
+ },
+ {
+  "id": "S_m2_idr_ss_s0",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/S_m2_idr_ss_s0",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "m2",
+   "--method",
+   "idr",
+   "--noise",
+   "ss",
+   "--seed",
+   "0"
+  ],
+  "done_file": "runs/paperproto/S_m2_idr_ss_s0/training_summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 1.0,
+  "group": "S_m2_idr_ss_s0"
+ },
+ {
+  "id": "eval_S_m2_idr_ss_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_m2_idr_ss_s0",
+   "--tests",
+   "m2,m2_prestm,m2_postm,m2_srme,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_m2_idr_ss_s0/eval/summary.json",
+  "deps": [
+   "S_m2_idr_ss_s0"
+  ],
+  "env": {},
+  "cost": 0.08,
+  "group": "S_m2_idr_ss_s0"
+ },
+ {
+  "id": "S_m2_sup_ss_s0",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/S_m2_sup_ss_s0",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "m2",
+   "--method",
+   "sup",
+   "--noise",
+   "ss",
+   "--seed",
+   "0"
+  ],
+  "done_file": "runs/paperproto/S_m2_sup_ss_s0/training_summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 1.0,
+  "group": "S_m2_sup_ss_s0"
+ },
+ {
+  "id": "eval_S_m2_sup_ss_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_m2_sup_ss_s0",
+   "--tests",
+   "m2,m2_prestm,m2_postm,m2_srme,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_m2_sup_ss_s0/eval/summary.json",
+  "deps": [
+   "S_m2_sup_ss_s0"
+  ],
+  "env": {},
+  "cost": 0.08,
+  "group": "S_m2_sup_ss_s0"
+ },
+ {
+  "id": "S_m2_idr_sd_s0",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/S_m2_idr_sd_s0",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "m2",
+   "--method",
+   "idr",
+   "--noise",
+   "sd",
+   "--seed",
+   "0"
+  ],
+  "done_file": "runs/paperproto/S_m2_idr_sd_s0/training_summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 1.0,
+  "group": "S_m2_idr_sd_s0"
+ },
+ {
+  "id": "eval_S_m2_idr_sd_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_m2_idr_sd_s0",
+   "--tests",
+   "m2,m2_prestm,m2_postm,m2_srme,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_m2_idr_sd_s0/eval/summary.json",
+  "deps": [
+   "S_m2_idr_sd_s0"
+  ],
+  "env": {},
+  "cost": 0.08,
+  "group": "S_m2_idr_sd_s0"
+ },
+ {
+  "id": "S_m2_sup_sd_s0",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/S_m2_sup_sd_s0",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "m2",
+   "--method",
+   "sup",
+   "--noise",
+   "sd",
+   "--seed",
+   "0"
+  ],
+  "done_file": "runs/paperproto/S_m2_sup_sd_s0/training_summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 1.0,
+  "group": "S_m2_sup_sd_s0"
+ },
+ {
+  "id": "eval_S_m2_sup_sd_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_m2_sup_sd_s0",
+   "--tests",
+   "m2,m2_prestm,m2_postm,m2_srme,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_m2_sup_sd_s0/eval/summary.json",
+  "deps": [
+   "S_m2_sup_sd_s0"
+  ],
+  "env": {},
+  "cost": 0.08,
+  "group": "S_m2_sup_sd_s0"
+ },
+ {
+  "id": "prep_m2_fixed_sg",
+  "cmd": [
+   "python",
+   "paperproto/prepare_seismic.py",
+   "fixed:m2:sg:0"
+  ],
+  "done_file": "data/seis/m2/train_fixed_sg_s0.npy",
+  "deps": [],
+  "env": {},
+  "cost": 0.02,
+  "group": "S_m2_idrfix_sg_s0"
+ },
+ {
+  "id": "S_m2_idrfix_sg_s0",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/S_m2_idrfix_sg_s0",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "m2",
+   "--method",
+   "idr",
+   "--noise",
+   "sg",
+   "--seed",
+   "0",
+   "--fixed",
+   "sg_s0"
+  ],
+  "done_file": "runs/paperproto/S_m2_idrfix_sg_s0/training_summary.json",
+  "deps": [
+   "prep_m2_fixed_sg"
+  ],
+  "env": {},
+  "cost": 1.0,
+  "group": "S_m2_idrfix_sg_s0"
+ },
+ {
+  "id": "eval_S_m2_idrfix_sg_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_m2_idrfix_sg_s0",
+   "--tests",
+   "m2,m2_prestm,m2_postm,m2_srme,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_m2_idrfix_sg_s0/eval/summary.json",
+  "deps": [
+   "S_m2_idrfix_sg_s0"
+  ],
+  "env": {},
+  "cost": 0.08,
+  "group": "S_m2_idrfix_sg_s0"
+ },
+ {
+  "id": "mismatch_S_m2_idr_sg_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_m2_idr_sg_s0",
+   "--noises",
+   "sg,sb",
+   "--tag",
+   "mismatch",
+   "--tests",
+   "m2,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_m2_idr_sg_s0/mismatch/summary.json",
+  "deps": [
+   "S_m2_idr_sg_s0"
+  ],
+  "env": {},
+  "cost": 0.05,
+  "group": "S_m2_idr_sg_s0"
+ },
+ {
+  "id": "mismatch_S_m2_idr_sb_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_m2_idr_sb_s0",
+   "--noises",
+   "sg,sb",
+   "--tag",
+   "mismatch",
+   "--tests",
+   "m2,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_m2_idr_sb_s0/mismatch/summary.json",
+  "deps": [
+   "S_m2_idr_sb_s0"
+  ],
+  "env": {},
+  "cost": 0.05,
+  "group": "S_m2_idr_sb_s0"
+ },
+ {
+  "id": "mismatch_S_m2_sup_sg_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_m2_sup_sg_s0",
+   "--noises",
+   "sg,sb",
+   "--tag",
+   "mismatch",
+   "--tests",
+   "m2,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_m2_sup_sg_s0/mismatch/summary.json",
+  "deps": [
+   "S_m2_sup_sg_s0"
+  ],
+  "env": {},
+  "cost": 0.05,
+  "group": "S_m2_sup_sg_s0"
+ },
+ {
+  "id": "mismatch_S_m2_sup_sb_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_m2_sup_sb_s0",
+   "--noises",
+   "sg,sb",
+   "--tag",
+   "mismatch",
+   "--tests",
+   "m2,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_m2_sup_sb_s0/mismatch/summary.json",
+  "deps": [
+   "S_m2_sup_sb_s0"
+  ],
+  "env": {},
+  "cost": 0.05,
+  "group": "S_m2_sup_sb_s0"
+ },
+ {
+  "id": "S_ot_idr_sg_s0",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/S_ot_idr_sg_s0",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "ot",
+   "--method",
+   "idr",
+   "--noise",
+   "sg",
+   "--seed",
+   "0"
+  ],
+  "done_file": "runs/paperproto/S_ot_idr_sg_s0/training_summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 1.0,
+  "group": "S_ot_idr_sg_s0"
+ },
+ {
+  "id": "eval_S_ot_idr_sg_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_ot_idr_sg_s0",
+   "--tests",
+   "m2,m2_prestm,m2_postm,m2_srme,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_ot_idr_sg_s0/eval/summary.json",
+  "deps": [
+   "S_ot_idr_sg_s0"
+  ],
+  "env": {},
+  "cost": 0.08,
+  "group": "S_ot_idr_sg_s0"
+ },
+ {
+  "id": "S_ot_idr_sg_s1",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/S_ot_idr_sg_s1",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "ot",
+   "--method",
+   "idr",
+   "--noise",
+   "sg",
+   "--seed",
+   "1"
+  ],
+  "done_file": "runs/paperproto/S_ot_idr_sg_s1/training_summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 1.0,
+  "group": "S_ot_idr_sg_s1"
+ },
+ {
+  "id": "eval_S_ot_idr_sg_s1",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_ot_idr_sg_s1",
+   "--tests",
+   "m2,m2_prestm,m2_postm,m2_srme,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_ot_idr_sg_s1/eval/summary.json",
+  "deps": [
+   "S_ot_idr_sg_s1"
+  ],
+  "env": {},
+  "cost": 0.08,
+  "group": "S_ot_idr_sg_s1"
+ },
+ {
+  "id": "S_ot_idr_sg_s2",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/S_ot_idr_sg_s2",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "ot",
+   "--method",
+   "idr",
+   "--noise",
+   "sg",
+   "--seed",
+   "2"
+  ],
+  "done_file": "runs/paperproto/S_ot_idr_sg_s2/training_summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 1.0,
+  "group": "S_ot_idr_sg_s2"
+ },
+ {
+  "id": "eval_S_ot_idr_sg_s2",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_ot_idr_sg_s2",
+   "--tests",
+   "m2,m2_prestm,m2_postm,m2_srme,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_ot_idr_sg_s2/eval/summary.json",
+  "deps": [
+   "S_ot_idr_sg_s2"
+  ],
+  "env": {},
+  "cost": 0.08,
+  "group": "S_ot_idr_sg_s2"
+ },
+ {
+  "id": "S_ot_sup_sg_s0",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/S_ot_sup_sg_s0",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "ot",
+   "--method",
+   "sup",
+   "--noise",
+   "sg",
+   "--seed",
+   "0"
+  ],
+  "done_file": "runs/paperproto/S_ot_sup_sg_s0/training_summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 1.0,
+  "group": "S_ot_sup_sg_s0"
+ },
+ {
+  "id": "eval_S_ot_sup_sg_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_ot_sup_sg_s0",
+   "--tests",
+   "m2,m2_prestm,m2_postm,m2_srme,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_ot_sup_sg_s0/eval/summary.json",
+  "deps": [
+   "S_ot_sup_sg_s0"
+  ],
+  "env": {},
+  "cost": 0.08,
+  "group": "S_ot_sup_sg_s0"
+ },
+ {
+  "id": "S_ot_sup_sg_s1",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/S_ot_sup_sg_s1",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "ot",
+   "--method",
+   "sup",
+   "--noise",
+   "sg",
+   "--seed",
+   "1"
+  ],
+  "done_file": "runs/paperproto/S_ot_sup_sg_s1/training_summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 1.0,
+  "group": "S_ot_sup_sg_s1"
+ },
+ {
+  "id": "eval_S_ot_sup_sg_s1",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_ot_sup_sg_s1",
+   "--tests",
+   "m2,m2_prestm,m2_postm,m2_srme,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_ot_sup_sg_s1/eval/summary.json",
+  "deps": [
+   "S_ot_sup_sg_s1"
+  ],
+  "env": {},
+  "cost": 0.08,
+  "group": "S_ot_sup_sg_s1"
+ },
+ {
+  "id": "S_ot_sup_sg_s2",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/S_ot_sup_sg_s2",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "ot",
+   "--method",
+   "sup",
+   "--noise",
+   "sg",
+   "--seed",
+   "2"
+  ],
+  "done_file": "runs/paperproto/S_ot_sup_sg_s2/training_summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 1.0,
+  "group": "S_ot_sup_sg_s2"
+ },
+ {
+  "id": "eval_S_ot_sup_sg_s2",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_ot_sup_sg_s2",
+   "--tests",
+   "m2,m2_prestm,m2_postm,m2_srme,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_ot_sup_sg_s2/eval/summary.json",
+  "deps": [
+   "S_ot_sup_sg_s2"
+  ],
+  "env": {},
+  "cost": 0.08,
+  "group": "S_ot_sup_sg_s2"
+ },
+ {
+  "id": "S_ot_idr_sb_s0",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/S_ot_idr_sb_s0",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "ot",
+   "--method",
+   "idr",
+   "--noise",
+   "sb",
+   "--seed",
+   "0"
+  ],
+  "done_file": "runs/paperproto/S_ot_idr_sb_s0/training_summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 1.0,
+  "group": "S_ot_idr_sb_s0"
+ },
+ {
+  "id": "eval_S_ot_idr_sb_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_ot_idr_sb_s0",
+   "--tests",
+   "m2,m2_prestm,m2_postm,m2_srme,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_ot_idr_sb_s0/eval/summary.json",
+  "deps": [
+   "S_ot_idr_sb_s0"
+  ],
+  "env": {},
+  "cost": 0.08,
+  "group": "S_ot_idr_sb_s0"
+ },
+ {
+  "id": "S_ot_sup_sb_s0",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/S_ot_sup_sb_s0",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "ot",
+   "--method",
+   "sup",
+   "--noise",
+   "sb",
+   "--seed",
+   "0"
+  ],
+  "done_file": "runs/paperproto/S_ot_sup_sb_s0/training_summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 1.0,
+  "group": "S_ot_sup_sb_s0"
+ },
+ {
+  "id": "eval_S_ot_sup_sb_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_ot_sup_sb_s0",
+   "--tests",
+   "m2,m2_prestm,m2_postm,m2_srme,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_ot_sup_sb_s0/eval/summary.json",
+  "deps": [
+   "S_ot_sup_sb_s0"
+  ],
+  "env": {},
+  "cost": 0.08,
+  "group": "S_ot_sup_sb_s0"
+ },
+ {
+  "id": "S_ot_idr_ss_s0",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/S_ot_idr_ss_s0",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "ot",
+   "--method",
+   "idr",
+   "--noise",
+   "ss",
+   "--seed",
+   "0"
+  ],
+  "done_file": "runs/paperproto/S_ot_idr_ss_s0/training_summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 1.0,
+  "group": "S_ot_idr_ss_s0"
+ },
+ {
+  "id": "eval_S_ot_idr_ss_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_ot_idr_ss_s0",
+   "--tests",
+   "m2,m2_prestm,m2_postm,m2_srme,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_ot_idr_ss_s0/eval/summary.json",
+  "deps": [
+   "S_ot_idr_ss_s0"
+  ],
+  "env": {},
+  "cost": 0.08,
+  "group": "S_ot_idr_ss_s0"
+ },
+ {
+  "id": "S_ot_sup_ss_s0",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/S_ot_sup_ss_s0",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "ot",
+   "--method",
+   "sup",
+   "--noise",
+   "ss",
+   "--seed",
+   "0"
+  ],
+  "done_file": "runs/paperproto/S_ot_sup_ss_s0/training_summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 1.0,
+  "group": "S_ot_sup_ss_s0"
+ },
+ {
+  "id": "eval_S_ot_sup_ss_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_ot_sup_ss_s0",
+   "--tests",
+   "m2,m2_prestm,m2_postm,m2_srme,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_ot_sup_ss_s0/eval/summary.json",
+  "deps": [
+   "S_ot_sup_ss_s0"
+  ],
+  "env": {},
+  "cost": 0.08,
+  "group": "S_ot_sup_ss_s0"
+ },
+ {
+  "id": "S_ot_idr_sd_s0",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/S_ot_idr_sd_s0",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "ot",
+   "--method",
+   "idr",
+   "--noise",
+   "sd",
+   "--seed",
+   "0"
+  ],
+  "done_file": "runs/paperproto/S_ot_idr_sd_s0/training_summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 1.0,
+  "group": "S_ot_idr_sd_s0"
+ },
+ {
+  "id": "eval_S_ot_idr_sd_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_ot_idr_sd_s0",
+   "--tests",
+   "m2,m2_prestm,m2_postm,m2_srme,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_ot_idr_sd_s0/eval/summary.json",
+  "deps": [
+   "S_ot_idr_sd_s0"
+  ],
+  "env": {},
+  "cost": 0.08,
+  "group": "S_ot_idr_sd_s0"
+ },
+ {
+  "id": "S_ot_sup_sd_s0",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/S_ot_sup_sd_s0",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "ot",
+   "--method",
+   "sup",
+   "--noise",
+   "sd",
+   "--seed",
+   "0"
+  ],
+  "done_file": "runs/paperproto/S_ot_sup_sd_s0/training_summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 1.0,
+  "group": "S_ot_sup_sd_s0"
+ },
+ {
+  "id": "eval_S_ot_sup_sd_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_ot_sup_sd_s0",
+   "--tests",
+   "m2,m2_prestm,m2_postm,m2_srme,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_ot_sup_sd_s0/eval/summary.json",
+  "deps": [
+   "S_ot_sup_sd_s0"
+  ],
+  "env": {},
+  "cost": 0.08,
+  "group": "S_ot_sup_sd_s0"
+ },
+ {
+  "id": "prep_ot_fixed_sg",
+  "cmd": [
+   "python",
+   "paperproto/prepare_seismic.py",
+   "fixed:ot:sg:0"
+  ],
+  "done_file": "data/seis/ot/train_fixed_sg_s0.npy",
+  "deps": [],
+  "env": {},
+  "cost": 0.02,
+  "group": "S_ot_idrfix_sg_s0"
+ },
+ {
+  "id": "S_ot_idrfix_sg_s0",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/S_ot_idrfix_sg_s0",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "ot",
+   "--method",
+   "idr",
+   "--noise",
+   "sg",
+   "--seed",
+   "0",
+   "--fixed",
+   "sg_s0"
+  ],
+  "done_file": "runs/paperproto/S_ot_idrfix_sg_s0/training_summary.json",
+  "deps": [
+   "prep_ot_fixed_sg"
+  ],
+  "env": {},
+  "cost": 1.0,
+  "group": "S_ot_idrfix_sg_s0"
+ },
+ {
+  "id": "eval_S_ot_idrfix_sg_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_ot_idrfix_sg_s0",
+   "--tests",
+   "m2,m2_prestm,m2_postm,m2_srme,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_ot_idrfix_sg_s0/eval/summary.json",
+  "deps": [
+   "S_ot_idrfix_sg_s0"
+  ],
+  "env": {},
+  "cost": 0.08,
+  "group": "S_ot_idrfix_sg_s0"
+ },
+ {
+  "id": "mismatch_S_ot_idr_sg_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_ot_idr_sg_s0",
+   "--noises",
+   "sg,sb",
+   "--tag",
+   "mismatch",
+   "--tests",
+   "m2,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_ot_idr_sg_s0/mismatch/summary.json",
+  "deps": [
+   "S_ot_idr_sg_s0"
+  ],
+  "env": {},
+  "cost": 0.05,
+  "group": "S_ot_idr_sg_s0"
+ },
+ {
+  "id": "mismatch_S_ot_idr_sb_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_ot_idr_sb_s0",
+   "--noises",
+   "sg,sb",
+   "--tag",
+   "mismatch",
+   "--tests",
+   "m2,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_ot_idr_sb_s0/mismatch/summary.json",
+  "deps": [
+   "S_ot_idr_sb_s0"
+  ],
+  "env": {},
+  "cost": 0.05,
+  "group": "S_ot_idr_sb_s0"
+ },
+ {
+  "id": "mismatch_S_ot_sup_sg_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_ot_sup_sg_s0",
+   "--noises",
+   "sg,sb",
+   "--tag",
+   "mismatch",
+   "--tests",
+   "m2,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_ot_sup_sg_s0/mismatch/summary.json",
+  "deps": [
+   "S_ot_sup_sg_s0"
+  ],
+  "env": {},
+  "cost": 0.05,
+  "group": "S_ot_sup_sg_s0"
+ },
+ {
+  "id": "mismatch_S_ot_sup_sb_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_ot_sup_sb_s0",
+   "--noises",
+   "sg,sb",
+   "--tag",
+   "mismatch",
+   "--tests",
+   "m2,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_ot_sup_sb_s0/mismatch/summary.json",
+  "deps": [
+   "S_ot_sup_sb_s0"
+  ],
+  "env": {},
+  "cost": 0.05,
+  "group": "S_ot_sup_sb_s0"
+ },
+ {
+  "id": "S_sa_idr_sg_s0",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/S_sa_idr_sg_s0",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "sa",
+   "--method",
+   "idr",
+   "--noise",
+   "sg",
+   "--seed",
+   "0"
+  ],
+  "done_file": "runs/paperproto/S_sa_idr_sg_s0/training_summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 1.0,
+  "group": "S_sa_idr_sg_s0"
+ },
+ {
+  "id": "eval_S_sa_idr_sg_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_sa_idr_sg_s0",
+   "--tests",
+   "m2,m2_prestm,m2_postm,m2_srme,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_sa_idr_sg_s0/eval/summary.json",
+  "deps": [
+   "S_sa_idr_sg_s0"
+  ],
+  "env": {},
+  "cost": 0.08,
+  "group": "S_sa_idr_sg_s0"
+ },
+ {
+  "id": "S_sa_idr_sg_s1",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/S_sa_idr_sg_s1",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "sa",
+   "--method",
+   "idr",
+   "--noise",
+   "sg",
+   "--seed",
+   "1"
+  ],
+  "done_file": "runs/paperproto/S_sa_idr_sg_s1/training_summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 1.0,
+  "group": "S_sa_idr_sg_s1"
+ },
+ {
+  "id": "eval_S_sa_idr_sg_s1",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_sa_idr_sg_s1",
+   "--tests",
+   "m2,m2_prestm,m2_postm,m2_srme,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_sa_idr_sg_s1/eval/summary.json",
+  "deps": [
+   "S_sa_idr_sg_s1"
+  ],
+  "env": {},
+  "cost": 0.08,
+  "group": "S_sa_idr_sg_s1"
+ },
+ {
+  "id": "S_sa_idr_sg_s2",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/S_sa_idr_sg_s2",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "sa",
+   "--method",
+   "idr",
+   "--noise",
+   "sg",
+   "--seed",
+   "2"
+  ],
+  "done_file": "runs/paperproto/S_sa_idr_sg_s2/training_summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 1.0,
+  "group": "S_sa_idr_sg_s2"
+ },
+ {
+  "id": "eval_S_sa_idr_sg_s2",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_sa_idr_sg_s2",
+   "--tests",
+   "m2,m2_prestm,m2_postm,m2_srme,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_sa_idr_sg_s2/eval/summary.json",
+  "deps": [
+   "S_sa_idr_sg_s2"
+  ],
+  "env": {},
+  "cost": 0.08,
+  "group": "S_sa_idr_sg_s2"
+ },
+ {
+  "id": "S_sa_sup_sg_s0",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/S_sa_sup_sg_s0",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "sa",
+   "--method",
+   "sup",
+   "--noise",
+   "sg",
+   "--seed",
+   "0"
+  ],
+  "done_file": "runs/paperproto/S_sa_sup_sg_s0/training_summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 1.0,
+  "group": "S_sa_sup_sg_s0"
+ },
+ {
+  "id": "eval_S_sa_sup_sg_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_sa_sup_sg_s0",
+   "--tests",
+   "m2,m2_prestm,m2_postm,m2_srme,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_sa_sup_sg_s0/eval/summary.json",
+  "deps": [
+   "S_sa_sup_sg_s0"
+  ],
+  "env": {},
+  "cost": 0.08,
+  "group": "S_sa_sup_sg_s0"
+ },
+ {
+  "id": "S_sa_sup_sg_s1",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/S_sa_sup_sg_s1",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "sa",
+   "--method",
+   "sup",
+   "--noise",
+   "sg",
+   "--seed",
+   "1"
+  ],
+  "done_file": "runs/paperproto/S_sa_sup_sg_s1/training_summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 1.0,
+  "group": "S_sa_sup_sg_s1"
+ },
+ {
+  "id": "eval_S_sa_sup_sg_s1",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_sa_sup_sg_s1",
+   "--tests",
+   "m2,m2_prestm,m2_postm,m2_srme,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_sa_sup_sg_s1/eval/summary.json",
+  "deps": [
+   "S_sa_sup_sg_s1"
+  ],
+  "env": {},
+  "cost": 0.08,
+  "group": "S_sa_sup_sg_s1"
+ },
+ {
+  "id": "S_sa_sup_sg_s2",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/S_sa_sup_sg_s2",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "sa",
+   "--method",
+   "sup",
+   "--noise",
+   "sg",
+   "--seed",
+   "2"
+  ],
+  "done_file": "runs/paperproto/S_sa_sup_sg_s2/training_summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 1.0,
+  "group": "S_sa_sup_sg_s2"
+ },
+ {
+  "id": "eval_S_sa_sup_sg_s2",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_sa_sup_sg_s2",
+   "--tests",
+   "m2,m2_prestm,m2_postm,m2_srme,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_sa_sup_sg_s2/eval/summary.json",
+  "deps": [
+   "S_sa_sup_sg_s2"
+  ],
+  "env": {},
+  "cost": 0.08,
+  "group": "S_sa_sup_sg_s2"
+ },
+ {
+  "id": "S_sa_idr_sb_s0",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/S_sa_idr_sb_s0",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "sa",
+   "--method",
+   "idr",
+   "--noise",
+   "sb",
+   "--seed",
+   "0"
+  ],
+  "done_file": "runs/paperproto/S_sa_idr_sb_s0/training_summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 1.0,
+  "group": "S_sa_idr_sb_s0"
+ },
+ {
+  "id": "eval_S_sa_idr_sb_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_sa_idr_sb_s0",
+   "--tests",
+   "m2,m2_prestm,m2_postm,m2_srme,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_sa_idr_sb_s0/eval/summary.json",
+  "deps": [
+   "S_sa_idr_sb_s0"
+  ],
+  "env": {},
+  "cost": 0.08,
+  "group": "S_sa_idr_sb_s0"
+ },
+ {
+  "id": "S_sa_sup_sb_s0",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/S_sa_sup_sb_s0",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "sa",
+   "--method",
+   "sup",
+   "--noise",
+   "sb",
+   "--seed",
+   "0"
+  ],
+  "done_file": "runs/paperproto/S_sa_sup_sb_s0/training_summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 1.0,
+  "group": "S_sa_sup_sb_s0"
+ },
+ {
+  "id": "eval_S_sa_sup_sb_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_sa_sup_sb_s0",
+   "--tests",
+   "m2,m2_prestm,m2_postm,m2_srme,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_sa_sup_sb_s0/eval/summary.json",
+  "deps": [
+   "S_sa_sup_sb_s0"
+  ],
+  "env": {},
+  "cost": 0.08,
+  "group": "S_sa_sup_sb_s0"
+ },
+ {
+  "id": "S_sa_idr_ss_s0",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/S_sa_idr_ss_s0",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "sa",
+   "--method",
+   "idr",
+   "--noise",
+   "ss",
+   "--seed",
+   "0"
+  ],
+  "done_file": "runs/paperproto/S_sa_idr_ss_s0/training_summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 1.0,
+  "group": "S_sa_idr_ss_s0"
+ },
+ {
+  "id": "eval_S_sa_idr_ss_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_sa_idr_ss_s0",
+   "--tests",
+   "m2,m2_prestm,m2_postm,m2_srme,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_sa_idr_ss_s0/eval/summary.json",
+  "deps": [
+   "S_sa_idr_ss_s0"
+  ],
+  "env": {},
+  "cost": 0.08,
+  "group": "S_sa_idr_ss_s0"
+ },
+ {
+  "id": "S_sa_sup_ss_s0",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/S_sa_sup_ss_s0",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "sa",
+   "--method",
+   "sup",
+   "--noise",
+   "ss",
+   "--seed",
+   "0"
+  ],
+  "done_file": "runs/paperproto/S_sa_sup_ss_s0/training_summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 1.0,
+  "group": "S_sa_sup_ss_s0"
+ },
+ {
+  "id": "eval_S_sa_sup_ss_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_sa_sup_ss_s0",
+   "--tests",
+   "m2,m2_prestm,m2_postm,m2_srme,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_sa_sup_ss_s0/eval/summary.json",
+  "deps": [
+   "S_sa_sup_ss_s0"
+  ],
+  "env": {},
+  "cost": 0.08,
+  "group": "S_sa_sup_ss_s0"
+ },
+ {
+  "id": "S_sa_idr_sd_s0",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/S_sa_idr_sd_s0",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "sa",
+   "--method",
+   "idr",
+   "--noise",
+   "sd",
+   "--seed",
+   "0"
+  ],
+  "done_file": "runs/paperproto/S_sa_idr_sd_s0/training_summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 1.0,
+  "group": "S_sa_idr_sd_s0"
+ },
+ {
+  "id": "eval_S_sa_idr_sd_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_sa_idr_sd_s0",
+   "--tests",
+   "m2,m2_prestm,m2_postm,m2_srme,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_sa_idr_sd_s0/eval/summary.json",
+  "deps": [
+   "S_sa_idr_sd_s0"
+  ],
+  "env": {},
+  "cost": 0.08,
+  "group": "S_sa_idr_sd_s0"
+ },
+ {
+  "id": "S_sa_sup_sd_s0",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/S_sa_sup_sd_s0",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "sa",
+   "--method",
+   "sup",
+   "--noise",
+   "sd",
+   "--seed",
+   "0"
+  ],
+  "done_file": "runs/paperproto/S_sa_sup_sd_s0/training_summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 1.0,
+  "group": "S_sa_sup_sd_s0"
+ },
+ {
+  "id": "eval_S_sa_sup_sd_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_sa_sup_sd_s0",
+   "--tests",
+   "m2,m2_prestm,m2_postm,m2_srme,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_sa_sup_sd_s0/eval/summary.json",
+  "deps": [
+   "S_sa_sup_sd_s0"
+  ],
+  "env": {},
+  "cost": 0.08,
+  "group": "S_sa_sup_sd_s0"
+ },
+ {
+  "id": "prep_sa_fixed_sg",
+  "cmd": [
+   "python",
+   "paperproto/prepare_seismic.py",
+   "fixed:sa:sg:0"
+  ],
+  "done_file": "data/seis/sa/train_fixed_sg_s0.npy",
+  "deps": [],
+  "env": {},
+  "cost": 0.02,
+  "group": "S_sa_idrfix_sg_s0"
+ },
+ {
+  "id": "S_sa_idrfix_sg_s0",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/S_sa_idrfix_sg_s0",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "sa",
+   "--method",
+   "idr",
+   "--noise",
+   "sg",
+   "--seed",
+   "0",
+   "--fixed",
+   "sg_s0"
+  ],
+  "done_file": "runs/paperproto/S_sa_idrfix_sg_s0/training_summary.json",
+  "deps": [
+   "prep_sa_fixed_sg"
+  ],
+  "env": {},
+  "cost": 1.0,
+  "group": "S_sa_idrfix_sg_s0"
+ },
+ {
+  "id": "eval_S_sa_idrfix_sg_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_sa_idrfix_sg_s0",
+   "--tests",
+   "m2,m2_prestm,m2_postm,m2_srme,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_sa_idrfix_sg_s0/eval/summary.json",
+  "deps": [
+   "S_sa_idrfix_sg_s0"
+  ],
+  "env": {},
+  "cost": 0.08,
+  "group": "S_sa_idrfix_sg_s0"
+ },
+ {
+  "id": "mismatch_S_sa_idr_sg_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_sa_idr_sg_s0",
+   "--noises",
+   "sg,sb",
+   "--tag",
+   "mismatch",
+   "--tests",
+   "m2,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_sa_idr_sg_s0/mismatch/summary.json",
+  "deps": [
+   "S_sa_idr_sg_s0"
+  ],
+  "env": {},
+  "cost": 0.05,
+  "group": "S_sa_idr_sg_s0"
+ },
+ {
+  "id": "mismatch_S_sa_idr_sb_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_sa_idr_sb_s0",
+   "--noises",
+   "sg,sb",
+   "--tag",
+   "mismatch",
+   "--tests",
+   "m2,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_sa_idr_sb_s0/mismatch/summary.json",
+  "deps": [
+   "S_sa_idr_sb_s0"
+  ],
+  "env": {},
+  "cost": 0.05,
+  "group": "S_sa_idr_sb_s0"
+ },
+ {
+  "id": "mismatch_S_sa_sup_sg_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_sa_sup_sg_s0",
+   "--noises",
+   "sg,sb",
+   "--tag",
+   "mismatch",
+   "--tests",
+   "m2,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_sa_sup_sg_s0/mismatch/summary.json",
+  "deps": [
+   "S_sa_sup_sg_s0"
+  ],
+  "env": {},
+  "cost": 0.05,
+  "group": "S_sa_sup_sg_s0"
+ },
+ {
+  "id": "mismatch_S_sa_sup_sb_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/S_sa_sup_sb_s0",
+   "--noises",
+   "sg,sb",
+   "--tag",
+   "mismatch",
+   "--tests",
+   "m2,ot,sa"
+  ],
+  "done_file": "runs/paperproto/S_sa_sup_sb_s0/mismatch/summary.json",
+  "deps": [
+   "S_sa_sup_sb_s0"
+  ],
+  "env": {},
+  "cost": 0.05,
+  "group": "S_sa_sup_sb_s0"
+ },
+ {
+  "id": "G_l2_idr_real",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/G_l2_idr_real",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "l2",
+   "--method",
+   "idr",
+   "--noise",
+   "sg",
+   "--seed",
+   "0",
+   "--fixed",
+   "raw",
+   "--level",
+   "0.19161,0.57484"
+  ],
+  "done_file": "runs/paperproto/G_l2_idr_real/training_summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 1.0,
+  "group": "G_l2"
+ },
+ {
+  "id": "prep_l2_fixed",
+  "cmd": [
+   "python",
+   "paperproto/prepare_seismic.py",
+   "fixed:l2:sg:0"
+  ],
+  "done_file": "data/seis/l2/train_fixed_sg_s0.npy",
+  "deps": [],
+  "env": {},
+  "cost": 0.01,
+  "group": "G_l2"
+ },
+ {
+  "id": "G_l2_idrfix_sg",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/G_l2_idrfix_sg",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "l2",
+   "--method",
+   "idr",
+   "--noise",
+   "sg",
+   "--seed",
+   "0",
+   "--fixed",
+   "sg_s0"
+  ],
+  "done_file": "runs/paperproto/G_l2_idrfix_sg/training_summary.json",
+  "deps": [
+   "prep_l2_fixed"
+  ],
+  "env": {},
+  "cost": 1.0,
+  "group": "G_l2"
+ },
+ {
+  "id": "eval_G_l2_idrfix_sg",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/G_l2_idrfix_sg",
+   "--tests",
+   "l2"
+  ],
+  "done_file": "runs/paperproto/G_l2_idrfix_sg/eval/summary.json",
+  "deps": [
+   "G_l2_idrfix_sg"
+  ],
+  "env": {},
+  "cost": 0.02,
+  "group": "G_l2"
+ },
+ {
+  "id": "field_l2",
+  "cmd": [
+   "python",
+   "paperproto/eval_field.py",
+   "--key",
+   "l2",
+   "--out",
+   "runs/paperproto/field_l2",
+   "--models",
+   "idr_real=runs/paperproto/G_l2_idr_real,idr_fixed=runs/paperproto/G_l2_idrfix_sg,idr_synth=runs/paperproto/C1_idr_sg_s0,sup_synth=runs/paperproto/C2_sup_sg_s0,idr_synth_sb=runs/paperproto/C7_idr_sb_s0"
+  ],
+  "done_file": "runs/paperproto/field_l2/summary.json",
+  "deps": [
+   "G_l2_idr_real",
+   "G_l2_idrfix_sg"
+  ],
+  "env": {},
+  "cost": 0.02,
+  "group": "G_l2"
+ },
+ {
+  "id": "G_w2_idr_real",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/G_w2_idr_real",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "w2",
+   "--method",
+   "idr",
+   "--noise",
+   "sg",
+   "--seed",
+   "0",
+   "--fixed",
+   "raw",
+   "--level",
+   "0.11221,0.33664"
+  ],
+  "done_file": "runs/paperproto/G_w2_idr_real/training_summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 1.0,
+  "group": "G_w2"
+ },
+ {
+  "id": "prep_w2_fixed",
+  "cmd": [
+   "python",
+   "paperproto/prepare_seismic.py",
+   "fixed:w2:sg:0"
+  ],
+  "done_file": "data/seis/w2/train_fixed_sg_s0.npy",
+  "deps": [],
+  "env": {},
+  "cost": 0.01,
+  "group": "G_w2"
+ },
+ {
+  "id": "G_w2_idrfix_sg",
+  "cmd": [
+   "python",
+   "paperproto/pp_train.py",
+   "--out",
+   "runs/paperproto/G_w2_idrfix_sg",
+   "--workers",
+   "2",
+   "--domain",
+   "seis",
+   "--keys",
+   "w2",
+   "--method",
+   "idr",
+   "--noise",
+   "sg",
+   "--seed",
+   "0",
+   "--fixed",
+   "sg_s0"
+  ],
+  "done_file": "runs/paperproto/G_w2_idrfix_sg/training_summary.json",
+  "deps": [
+   "prep_w2_fixed"
+  ],
+  "env": {},
+  "cost": 1.0,
+  "group": "G_w2"
+ },
+ {
+  "id": "eval_G_w2_idrfix_sg",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/G_w2_idrfix_sg",
+   "--tests",
+   "w2"
+  ],
+  "done_file": "runs/paperproto/G_w2_idrfix_sg/eval/summary.json",
+  "deps": [
+   "G_w2_idrfix_sg"
+  ],
+  "env": {},
+  "cost": 0.02,
+  "group": "G_w2"
+ },
+ {
+  "id": "field_w2",
+  "cmd": [
+   "python",
+   "paperproto/eval_field.py",
+   "--key",
+   "w2",
+   "--out",
+   "runs/paperproto/field_w2",
+   "--models",
+   "idr_real=runs/paperproto/G_w2_idr_real,idr_fixed=runs/paperproto/G_w2_idrfix_sg,idr_synth=runs/paperproto/C1_idr_sg_s0,sup_synth=runs/paperproto/C2_sup_sg_s0,idr_synth_sb=runs/paperproto/C7_idr_sb_s0"
+  ],
+  "done_file": "runs/paperproto/field_w2/summary.json",
+  "deps": [
+   "G_w2_idr_real",
+   "G_w2_idrfix_sg"
+  ],
+  "env": {},
+  "cost": 0.02,
+  "group": "G_w2"
+ },
+ {
+  "id": "eval2d_C1_idr_sg_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/C1_idr_sg_s0",
+   "--tests",
+   "l2,w2",
+   "--tag",
+   "eval_2d"
+  ],
+  "done_file": "runs/paperproto/C1_idr_sg_s0/eval_2d/summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 0.02,
+  "group": "G_l2"
+ },
+ {
+  "id": "eval2d_C2_sup_sg_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/C2_sup_sg_s0",
+   "--tests",
+   "l2,w2",
+   "--tag",
+   "eval_2d"
+  ],
+  "done_file": "runs/paperproto/C2_sup_sg_s0/eval_2d/summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 0.02,
+  "group": "G_l2"
+ },
+ {
+  "id": "eval2d_C7_idr_sb_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/C7_idr_sb_s0",
+   "--tests",
+   "l2,w2",
+   "--tag",
+   "eval_2d"
+  ],
+  "done_file": "runs/paperproto/C7_idr_sb_s0/eval_2d/summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 0.02,
+  "group": "G_l2"
+ },
+ {
+  "id": "eval2d_C7_sup_sb_s0",
+  "cmd": [
+   "python",
+   "paperproto/eval_seis.py",
+   "--run",
+   "runs/paperproto/C7_sup_sb_s0",
+   "--tests",
+   "l2,w2",
+   "--tag",
+   "eval_2d"
+  ],
+  "done_file": "runs/paperproto/C7_sup_sb_s0/eval_2d/summary.json",
+  "deps": [],
+  "env": {},
+  "cost": 0.02,
+  "group": "G_l2"
+ }
+]
