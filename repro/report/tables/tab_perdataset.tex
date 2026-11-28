@@ -1,0 +1,28 @@
+\begin{table*}[!t]
+\centering
+\caption{One model per synthetic survey (Kaggle T4, FP32) vs.\ the joint-corpus model (subscript $J$). Top: own-survey test SNR (dB). White noise $\sigma=0.5$: mean$\pm$sd over training seeds 0--2 (joint: mean over seeds 0--2); band-limited $\sigma=0.5$, spikes $p=0.05$, dead traces 0.3 and ``fix'' (Fast IDR on one fixed noisy copy, white): seed 0. Bottom: transfer, white noise $\sigma=0.5$, Fast IDR / supervised, mean over seeds 0--2 (seed sd up to 2.06\,dB); input SNR 5.98, 4.80, 5.47, 5.47, 5.99, 6.01 dB respectively. $^\ast$Unseen processing.}
+\label{tab:perdataset}
+\begin{tabular}{lccccccccccc}
+\toprule
+& \multicolumn{4}{c}{White (sg)} & \multicolumn{2}{c}{Band-limited (sb)} & \multicolumn{2}{c}{Spikes (ss)} & \multicolumn{2}{c}{Dead traces (sd)} & sg \\
+\cmidrule(lr){2-5}\cmidrule(lr){6-7}\cmidrule(lr){8-9}\cmidrule(lr){10-11}\cmidrule(lr){12-12}
+Survey & IDR & Sup & IDR$_J$ & Sup$_J$ & IDR & Sup & IDR & Sup & IDR & Sup & fix \\
+\midrule
+Marmousi2 & 19.44$\pm$0.22 & 18.47$\pm$0.22 & 19.47 & 19.46 & 18.82 & 17.40 & 17.87 & 22.49 & 27.37 & 28.64 & 16.37 \\
+Overthrust & 19.42$\pm$0.12 & 20.20$\pm$0.03 & 19.07 & 19.96 & 17.56 & 18.16 & 31.57 & 34.83 & 20.48 & 20.45 & 19.77 \\
+Salt & 23.19$\pm$0.36 & 24.07$\pm$0.08 & 23.24 & 24.42 & 22.38 & 22.87 & 24.53 & 26.12 & 14.68 & 15.54 & 23.85 \\
+\bottomrule
+\end{tabular}
+
+\vspace{4pt}
+\begin{tabular}{lcccccc}
+\toprule
+Trained on $\downarrow$ / tested on $\rightarrow$ & Marmousi2 & M2 PreSTM$^\ast$ & M2 PostSTM$^\ast$ & M2 SRME$^\ast$ & Overthrust & Salt \\
+\midrule
+Marmousi2 & 19.44/18.47 & 15.72/12.65 & 15.27/12.31 & 17.69/15.21 & 3.31/3.32 & 4.90/4.63 \\
+Overthrust & 3.04/4.01 & 10.15/9.28 & 10.26/9.47 & 10.89/8.90 & 19.42/20.20 & 17.52/18.13 \\
+Salt & 5.30/5.72 & 9.16/7.00 & 9.30/7.12 & 9.80/7.54 & 14.06/12.54 & 23.19/24.07 \\
+Joint & 19.47/19.46 & 17.37/15.67 & 17.08/15.30 & 18.52/17.62 & 19.07/19.96 & 23.24/24.42 \\
+\bottomrule
+\end{tabular}
+\end{table*}

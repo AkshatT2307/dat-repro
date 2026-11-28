@@ -1,0 +1,24 @@
+\begin{table}[!t]
+\centering
+\caption{Shallow U-Net \texttt{UNet\_n2n\_un} (no normalization layers), parsed from \texttt{models/unet.py}. Channels and parameters for one input/output channel (seismic, $C=1$); output size for a $256\times256$ crop. All convolutions are $3\times3$, stride 1, padding 1, with bias; LReLU slope 0.1; up$\times$2 is nearest-neighbour; [cat $\cdot$] is channel concatenation with the named skip tensor.}
+\label{tab:unet}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{llccr}
+\toprule
+Stage & Operations & Channels & Output & Params \\
+\midrule
+en\_block1 & 2$\times$[conv3$\times$3, LReLU], maxpool & 1$\to$48 & $128^2$ & 21,264 \\
+en\_block2 & conv3$\times$3, LReLU, maxpool & 48$\to$48 & $64^2$ & 20,784 \\
+en\_block3 & conv3$\times$3, LReLU, maxpool & 48$\to$48 & $32^2$ & 20,784 \\
+en\_block4 & conv3$\times$3, LReLU, maxpool & 48$\to$48 & $16^2$ & 20,784 \\
+en\_block5 & conv, LReLU, maxpool, conv, LReLU, up$\times$2 & 48$\to$48 & $16^2$ & 41,568 \\
+de\_block1 & [cat e4] 2$\times$[conv, LReLU], up$\times$2 & 96$\to$96 & $32^2$ & 166,080 \\
+de\_block2 & [cat e3] 2$\times$[conv, LReLU], up$\times$2 & 144$\to$96 & $64^2$ & 207,552 \\
+de\_block3 & [cat e2] 2$\times$[conv, LReLU], up$\times$2 & 144$\to$96 & $128^2$ & 207,552 \\
+de\_block4 & [cat e1] 2$\times$[conv, LReLU], up$\times$2 & 144$\to$96 & $256^2$ & 207,552 \\
+de\_block5 & [cat input] conv, LReLU, conv, LReLU, conv & 97$\to$64$\to$32$\to$1 & $256^2$ & 74,689 \\
+\midrule
+\multicolumn{4}{l}{Total, $C=1$ (seismic, gray) / $C=3$ (RGB)} & 988,609 / 991,203 \\
+\bottomrule
+\end{tabular}}
+\end{table}

@@ -1,0 +1,19 @@
+\begin{table*}[!t]
+\centering
+\caption{Field data, semi-synthetic test: white noise added to field sections, original section as reference; output SNR (dB), mean over test sections and 3 noise seeds, seed-0 models. ``Trained on the survey'': Fast IDR trained on one fixed noisy copy of the survey's training sections (no clean data). Best classical: $^B$BM3D with oracle $\sigma$, $^P$bandpass 5--60 Hz, $^F$$f$-$x$ deconvolution; BM3D was not run on the 2D lines. The supervised oracle treats the field section as clean and was not run on the 2D lines. Bold: best non-oracle method.}
+\label{tab:field_semi}
+\begin{tabular}{lcccccccc}
+\toprule
+& \multicolumn{2}{c}{2D land (NPR-A)} & \multicolumn{2}{c}{2D marine (NAMSS)} & \multicolumn{2}{c}{3D land (Stratton)} & \multicolumn{2}{c}{3D marine (F3)} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(lr){8-9}
+Method & $\sigma$=0.5 & 1.0 & 0.5 & 1.0 & 0.5 & 1.0 & 0.5 & 1.0 \\
+\midrule
+Fast IDR, trained on the survey & \textbf{11.51} & \textbf{8.48} & \textbf{8.53} & \textbf{5.15} & \textbf{13.30} & \textbf{9.62} & \textbf{14.97} & \textbf{11.41} \\
+\textit{Supervised on survey (oracle)} & -- & -- & -- & -- & 13.43 & 9.66 & 14.69 & 11.04 \\
+Best classical & 9.38$^{P}$ & 5.92$^{F}$ & 5.85$^{P}$ & 2.76$^{F}$ & 12.13$^{B}$ & 8.42$^{B}$ & 13.84$^{B}$ & 10.04$^{B}$ \\
+Fast IDR, synthetic corpus & 9.25 & 6.27 & 2.94 & 1.96 & 10.20 & 6.94 & 10.82 & 7.35 \\
+Supervised, synthetic corpus & 9.63 & 6.25 & 3.31 & 2.09 & 10.25 & 6.87 & 10.48 & 7.28 \\
+\textit{Input} & 6.01 & $-$0.02 & 4.93 & $-$1.09 & 5.58 & $-$0.44 & 6.01 & $-$0.01 \\
+\bottomrule
+\end{tabular}
+\end{table*}

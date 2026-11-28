@@ -1,0 +1,19 @@
+\begin{table*}[!t]
+\centering
+\caption{Additive Gaussian noise, PSNR (dB). ``Paper'' columns are copied from Zhang et al.~\cite{zhang2022idr}; ``ours'' are measured with protocol P (50k steps, batch 4, $256^2$ crops). Fast IDR and supervised RGB rows: mean$\pm$sd over training seeds 0--2; BSD68 (gray) and other methods: seed 0. Our Nr2N is the stage-0 IDR network used as a Noisier2Noise estimator ($2f(z)-z$, averaged over $K=8$ draws), an ablation rather than a reproduction of the paper's Nr2N row. Bold/underline: best/second among methods needing neither clean data nor a second noisy copy (BM3D, Nr2N, Fast IDR); N2N and supervised are reference bounds.}
+\label{tab:img_gauss}
+\begin{tabular}{llcccccccccc}
+\toprule
+& & \multicolumn{2}{c}{BM3D} & \multicolumn{2}{c}{Nr2N} & \multicolumn{2}{c}{Fast IDR} & \multicolumn{2}{c}{N2N} & \multicolumn{2}{c}{Supervised} \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}\cmidrule(lr){7-8}\cmidrule(lr){9-10}\cmidrule(lr){11-12}
+Set & $\sigma$ & paper & ours & paper & ours & paper & ours & paper & ours & paper & ours \\
+\midrule
+Kodak & 25 & 31.88 & \underline{31.90} & 31.96 & 31.01 & 32.36 & \textbf{31.91}$\pm$0.01 & 32.39 & 32.02 & 32.39 & 32.09$\pm$0.01 \\
+Kodak & 50 & 28.64 & \underline{28.69} & 28.73 & 27.75 & 29.27 & \textbf{28.73}$\pm$0.01 & 29.23 & 28.81 & 29.24 & 28.91$\pm$0.01 \\
+BSDS300 & 25 & 30.47 & \underline{31.04} & 29.57 & 30.31 & 31.48 & \textbf{31.16}$\pm$0.00 & 31.39 & 31.26 & 31.40 & 31.30$\pm$0.01 \\
+BSDS300 & 50 & 27.14 & \underline{27.69} & 26.18 & 26.99 & 28.25 & \textbf{27.87}$\pm$0.01 & 28.17 & 27.94 & 28.17 & 28.01$\pm$0.01 \\
+BSD68 & 25 & 28.55 & \underline{28.60} & -- & -- & 29.20 & \textbf{28.84} & 29.15 & -- & 29.20 & 29.04 \\
+BSD68 & 50 & 25.59 & \underline{25.67} & -- & -- & 26.25 & \textbf{25.95} & 26.23 & -- & 26.24 & 26.11 \\
+\bottomrule
+\end{tabular}
+\end{table*}

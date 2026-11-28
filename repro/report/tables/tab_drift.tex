@@ -1,0 +1,24 @@
+\begin{table}[!t]
+\centering
+\caption{Attribution of the drift between our earlier reproduction, the paper protocol, and the paper (PSNR change in dB, same evaluator). Training-side rows: Kodak $\sigma$=25, relative to the protocol-P seed-0 model. Inference-side rows: mean over Kodak and BSDS300 at $\sigma$=25/50 (test-100 row: BSDS300 $\sigma$=25 only).}
+\label{tab:drift}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lcc}
+\toprule
+Factor & IDR & Supervised \\
+\midrule
+\multicolumn{3}{l}{\emph{Training side}} \\
+Batch 192, epoch schedule (earlier repro) & $-$1.37 & $-$0.98 \\
+128-px crops (vs.\ 256-px, same split) & $-$0.11 & $-$0.18 \\
+49k/1k train/holdout split & $-$0.03 & $+$0.01 \\
+FP32 instead of TF32 (A1 control) & $-$0.04 & -- \\
+Fixed noisy copy instead of fresh noise (A5) & $-$0.03 & -- \\
+\midrule
+\multicolumn{3}{l}{\emph{Inference side}} \\
+BGR instead of RGB channel order & $-$0.05 & $-$0.02 \\
+PSNR on float output (no uint8 rounding) & $+$0.01 & $+$0.01 \\
+Clipping the noisy input to $[0,1]$ & $-$0.83 & $-$0.89 \\
+BSDS300 test-100 split instead of all 300 ($\sigma$=25) & $-$0.36 & $-$0.38 \\
+\bottomrule
+\end{tabular}}
+\end{table}

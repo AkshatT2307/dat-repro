@@ -1,0 +1,19 @@
+\begin{table}[!t]
+\centering
+\caption{Training cost for 50k steps: average throughput (steps/s) and wall-clock time (min). Several jobs shared one GPU, so absolute times are indicative; the IDR/supervised ratio within a row is comparable.}
+\label{tab:runtime}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{llccccc}
+\toprule
+& & \multicolumn{2}{c}{steps/s} & \multicolumn{2}{c}{min} & \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}
+Setting & GPU & IDR & Sup & IDR & Sup & IDR overhead \\
+\midrule
+Images, Gaussian & RTX 5070 Ti & 9.21 & 10.98 & 91 & 76 & $+$19\% \\
+Seismic joint, sg & RTX 5070 Ti & 9.24 & 11.56 & 90 & 72 & $+$25\% \\
+Seismic joint, sb & RTX 5070 Ti & 7.50 & 9.90 & 111 & 84 & $+$32\% \\
+Marmousi2 only, sg & T4 & 4.42 & 5.82 & 188 & 143 & $+$32\% \\
+Overthrust only, sg & T4 & 4.74 & 5.72 & 176 & 146 & $+$21\% \\
+\bottomrule
+\end{tabular}}
+\end{table}

@@ -1,0 +1,47 @@
+\begin{table}[!t]
+\centering
+\caption{Synthetic seismic, sparse noise (joint-corpus models, seed 0): output SNR (dB). Masked-$L_2$ loss for dead traces. Classical: $f$-$x$ deconvolution and $5\times3$ median for spikes; trace interpolation for dead traces (second classical column). $^\ast$Unseen processing; $^\dagger$field section with noise added (reference = original section). Bold/underline among classical and Fast IDR.}
+\label{tab:seis_sparse}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{llccccc}
+\toprule
+Test & Level & Input & Classical 1 & Classical 2 & Fast IDR & Sup. \\
+\midrule
+\multicolumn{7}{l}{\emph{Erratic spikes (ss), rate $p$}; classical: $f$-$x$, Median} \\
+Marmousi2 & 0.05 & $-$1.51 & \underline{7.75} & $-$0.26 & \textbf{18.24} & 21.70 \\
+ & 0.1 & $-$4.51 & \underline{5.00} & $-$0.26 & \textbf{15.39} & 18.61 \\
+M2 PreSTM$^\ast$ & 0.05 & $-$2.69 & \underline{7.31} & $-$0.19 & \textbf{32.30} & 36.85 \\
+ & 0.1 & $-$5.69 & \underline{4.52} & $-$0.22 & \textbf{28.25} & 32.55 \\
+M2 PostSTM$^\ast$ & 0.05 & $-$2.00 & \underline{7.86} & $-$0.16 & \textbf{32.26} & 36.84 \\
+ & 0.1 & $-$5.03 & \underline{5.09} & $-$0.21 & \textbf{28.67} & 32.67 \\
+M2 SRME$^\ast$ & 0.05 & $-$2.01 & \underline{8.20} & $-$0.53 & \textbf{29.77} & 34.88 \\
+ & 0.1 & $-$5.04 & \underline{5.36} & $-$0.54 & \textbf{26.19} & 31.16 \\
+Overthrust & 0.05 & $-$1.50 & \underline{6.48} & 6.45 & \textbf{30.65} & 35.07 \\
+ & 0.1 & $-$4.50 & 4.22 & \underline{6.05} & \textbf{26.85} & 31.13 \\
+Salt & 0.05 & $-$1.47 & \underline{5.97} & 5.19 & \textbf{24.34} & 27.82 \\
+ & 0.1 & $-$4.48 & 3.97 & \underline{4.94} & \textbf{21.51} & 25.87 \\
+F3$^\dagger$ & 0.05 & $-$1.47 & 6.17 & \underline{9.36} & \textbf{21.16} & 20.36 \\
+ & 0.1 & $-$4.50 & 3.94 & \underline{8.74} & \textbf{17.74} & 17.69 \\
+Stratton$^\dagger$ & 0.05 & $-$1.90 & 6.69 & \underline{8.53} & \textbf{23.08} & 23.13 \\
+ & 0.1 & $-$4.91 & 5.14 & \underline{8.07} & \textbf{19.20} & 19.81 \\
+\midrule
+\multicolumn{7}{l}{\emph{Dead traces (sd), fraction}; classical: Interp.} \\
+Marmousi2 & 0.3 & 5.39 & -- & \underline{4.70} & \textbf{21.18} & 24.03 \\
+ & 0.5 & 2.99 & -- & \underline{2.36} & \textbf{14.72} & 17.67 \\
+M2 PreSTM$^\ast$ & 0.3 & 5.14 & -- & \underline{23.27} & \textbf{28.13} & 28.52 \\
+ & 0.5 & 2.99 & -- & \underline{17.03} & \textbf{21.65} & 22.04 \\
+M2 PostSTM$^\ast$ & 0.3 & 5.24 & -- & \underline{24.83} & \textbf{27.72} & 28.14 \\
+ & 0.5 & 2.98 & -- & \underline{17.24} & \textbf{21.17} & 22.12 \\
+M2 SRME$^\ast$ & 0.3 & 5.30 & -- & \underline{23.36} & \textbf{25.38} & 25.85 \\
+ & 0.5 & 3.08 & -- & \underline{18.37} & \textbf{21.84} & 22.31 \\
+Overthrust & 0.3 & 5.17 & -- & \underline{16.60} & \textbf{19.51} & 19.69 \\
+ & 0.5 & 3.01 & -- & \underline{12.31} & \textbf{15.19} & 15.36 \\
+Salt & 0.3 & 5.26 & -- & \underline{13.00} & \textbf{14.38} & 15.58 \\
+ & 0.5 & 2.95 & -- & \underline{9.96} & \textbf{11.16} & 11.98 \\
+F3$^\dagger$ & 0.3 & 5.27 & -- & \underline{17.67} & \textbf{18.07} & 17.75 \\
+ & 0.5 & 3.01 & -- & \underline{12.44} & \textbf{12.77} & 12.69 \\
+Stratton$^\dagger$ & 0.3 & 5.25 & -- & \textbf{13.87} & \underline{13.30} & 13.26 \\
+ & 0.5 & 3.12 & -- & \textbf{10.58} & \underline{10.08} & 10.06 \\
+\bottomrule
+\end{tabular}}
+\end{table}
