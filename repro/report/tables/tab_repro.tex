@@ -1,0 +1,21 @@
+\begin{table}[!t]
+\centering
+\caption{Reproducibility map. Run folders are under \texttt{runs/paperproto/}; each holds \texttt{config.json}, \texttt{metrics.jsonl}, \texttt{console.log} and the evaluation \texttt{summary.json}; checkpoints are \texttt{weights.pth} (final) and, for later runs, \texttt{weights\_step\{10..50\}000.pth}. Scripts are in \texttt{paperproto/} unless a path is given.}
+\label{tab:repro}
+\scriptsize
+\begin{tabular}{@{}p{0.28\columnwidth}p{0.29\columnwidth}p{0.32\columnwidth}@{}}
+\toprule
+Experiment & Runs & Scripts \\
+\midrule
+Image Gaussian (Tab.~\ref{tab:img_gauss}) & A1/A2 (s0--2), A3, A4, A6, A10 & pp\_train.py, eval\_images.py, nr2n\_correct.py, bm3d\_images.py \\
+Image binomial/impulse/corr. & A7, A8, A9 (scn1--4) & pp\_train.py, eval\_images.py \\
+Drift attribution (Tab.~\ref{tab:drift}) & drift/, A1\_fp32, A5 & drift\_images.py \\
+Seismic joint corpus & C1/C2 (s0--2), C3--C9 & pp\_train.py, eval\_seis.py, baselines\_seis.py \\
+Noise mismatch (Tab.~\ref{tab:mismatch}) & C1, C2, C7 \texttt{mismatch/} & eval\_seis.py --noises \\
+Per-survey models & S\_\{m2,ot,sa\}\_* & kgl/kernel\_template.py, eval\_seis.py \\
+3D field (F3, Stratton) & F1--F4, field\_f3, field\_st & pp\_train.py, eval\_field.py \\
+2D field (NPR-A, NAMSS) & G\_\{l2,w2\}\_*, field\_\{l2,w2\}, baselines\_seis\_2d & kgl/kernel\_template.py, eval\_field.py \\
+Figures and tables & all of the above & scripts/make\_figures.py, scripts/make\_tables.py \\
+\bottomrule
+\end{tabular}
+\end{table}

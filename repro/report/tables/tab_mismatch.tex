@@ -1,0 +1,18 @@
+\begin{table}[!t]
+\centering
+\caption{Noise-model mismatch (joint-corpus models, seed 0): output SNR (dB), mean over Marmousi2, Overthrust and Salt test sets. $\sigma=1.5$ lies outside the training range $U[0,1]$. Input SNR: 5.99, $-0.03$, $-3.55$ dB.}
+\label{tab:mismatch}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lcccccc}
+\toprule
+& \multicolumn{3}{c}{Test: white (sg)} & \multicolumn{3}{c}{Test: band-limited (sb)} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+Trained on & 0.5 & 1.0 & 1.5 & 0.5 & 1.0 & 1.5 \\
+\midrule
+Fast IDR, sg & 20.51 & 17.31 & 14.99 & 13.24 & 3.07 & $-$1.40 \\
+Supervised, sg & 21.15 & 17.90 & 15.47 & 14.41 & 2.76 & $-$1.86 \\
+Fast IDR, sb & 19.87 & 16.50 & 13.88 & 19.56 & 16.09 & 13.51 \\
+Supervised, sb & 19.84 & 16.44 & 12.55 & 20.12 & 16.59 & 13.69 \\
+\bottomrule
+\end{tabular}}
+\end{table}

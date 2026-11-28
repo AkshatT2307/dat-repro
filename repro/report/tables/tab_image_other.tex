@@ -1,0 +1,31 @@
+\begin{table}[!t]
+\centering
+\caption{Non-Gaussian image noise, PSNR (dB), seed 0. (a) Binomial and impulse noise, $p=0.5$ (paper Table~5; the paper's text and table may swap the two row labels). (b) Spatially correlated noise, upstream kernels g1--g4 at upstream ``level 5'' (a variance of $5/255$); g5 is undefined in the released code. $\Delta$ = ours $-$ paper.}
+\label{tab:img_other}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{llcccccc}
+\toprule
+\multicolumn{8}{l}{(a) Binomial / impulse} \\
+& & \multicolumn{3}{c}{Fast IDR} & \multicolumn{3}{c}{Supervised} \\
+\cmidrule(lr){3-5}\cmidrule(lr){6-8}
+Set & Noise & paper & ours & $\Delta$ & paper & ours & $\Delta$ \\
+\midrule
+Kodak & binomial & 31.63 & 31.78 & $+$0.15 & 31.84 & 32.41 & $+$0.57 \\
+Kodak & impulse & 34.92 & 35.96 & $+$1.04 & 35.83 & 34.23 & $-$1.60 \\
+BSDS300 & binomial & 32.18 & 31.81 & $-$0.37 & 32.32 & 31.51 & $-$0.81 \\
+BSDS300 & impulse & 37.40 & 35.90 & $-$1.50 & 37.48 & 33.87 & $-$3.61 \\
+\midrule
+\multicolumn{8}{l}{(b) Spatially correlated} \\
+Set & Kernel & BM3D (paper) & IDR (paper) & IDR (ours) & $\Delta$ & & \\
+\midrule
+Kodak & g1 & 31.56 & 37.46 & 30.01 & $-$7.45 \\
+Kodak & g2 & 29.20 & 33.10 & 32.94 & $-$0.16 \\
+Kodak & g3 & 31.38 & 41.88 & 42.27 & $+$0.39 \\
+Kodak & g4 & 27.23 & 28.60 & 28.46 & $-$0.14 \\
+BSDS300 & g1 & 26.77 & 29.83 & 29.73 & $-$0.10 \\
+BSDS300 & g2 & 27.84 & 31.28 & 31.79 & $+$0.51 \\
+BSDS300 & g3 & 29.59 & 38.22 & 39.64 & $+$1.42 \\
+BSDS300 & g4 & 26.14 & 27.39 & 27.64 & $+$0.25 \\
+\bottomrule
+\end{tabular}}
+\end{table}

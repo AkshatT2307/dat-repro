@@ -1,0 +1,31 @@
+\begin{table}[!t]
+\centering
+\caption{Real field noise (no reference). Removed energy $\|x-\hat y\|^2/\|x\|^2$ in \%, overall and inside / outside 5--60 Hz (each relative to the raw energy in that band), and leakage = mean $|$local similarity$|$ between output and removed component (lower is better; unreliable when almost nothing is removed). Out-of-band fractions also count energy a model adds where the raw data have little (see Fig.~\ref{fig:field_spectra}). $\hat\sigma$: MAD noise estimate; the ``raw + added noise'' model was trained with $\sigma\sim U[0.5\hat\sigma,1.5\hat\sigma]$.}
+\label{tab:field_real}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{llcccc}
+\toprule
+Data & Model & Removed & In band & Out of band & Leakage \\
+\midrule
+\multirow{4}{*}{\shortstack[l]{2D land\\$\hat\sigma$=0.383}} & Fast IDR, survey (raw + added noise) & 0.15 & 0.12 & 6.59 & 0.118 \\
+ & Fast IDR, survey (fixed noisy copy) & 0.00 & 0.00 & 0.26 & 0.163 \\
+ & Fast IDR, synthetic corpus & 1.44 & 1.30 & 28.60 & 0.373 \\
+ & Supervised, synthetic corpus & 0.97 & 0.88 & 18.84 & 0.370 \\
+\midrule
+\multirow{4}{*}{\shortstack[l]{2D marine\\$\hat\sigma$=0.224}} & Fast IDR, survey (raw + added noise) & 1.44 & 0.46 & 4.74 & 0.320 \\
+ & Fast IDR, survey (fixed noisy copy) & 0.04 & 0.01 & 0.13 & 0.300 \\
+ & Fast IDR, synthetic corpus & 40.34 & 27.59 & 83.62 & 0.284 \\
+ & Supervised, synthetic corpus & 33.97 & 20.53 & 79.46 & 0.290 \\
+\midrule
+\multirow{4}{*}{\shortstack[l]{3D land\\$\hat\sigma$=0.092}} & Fast IDR, survey (raw + added noise) & 0.04 & 0.01 & 0.18 & 0.054 \\
+ & Fast IDR, survey (fixed noisy copy) & 0.03 & 0.01 & 0.09 & 0.511 \\
+ & Fast IDR, synthetic corpus & 0.90 & 0.75 & 1.64 & 0.361 \\
+ & Supervised, synthetic corpus & 0.73 & 0.79 & 0.57 & 0.338 \\
+\midrule
+\multirow{4}{*}{\shortstack[l]{3D marine\\$\hat\sigma$=0.054}} & Fast IDR, survey (raw + added noise) & 0.02 & 0.01 & 0.18 & 0.124 \\
+ & Fast IDR, survey (fixed noisy copy) & 0.01 & 0.01 & 0.05 & 0.168 \\
+ & Fast IDR, synthetic corpus & 1.09 & 0.75 & 4.64 & 0.311 \\
+ & Supervised, synthetic corpus & 1.52 & 0.80 & 8.80 & 0.263 \\
+\bottomrule
+\end{tabular}}
+\end{table}
