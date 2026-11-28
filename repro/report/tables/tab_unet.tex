@@ -1,6 +1,6 @@
 \begin{table}[!t]
 \centering
-\caption{Shallow U-Net \texttt{UNet\_n2n\_un} (no normalization layers), parsed from \texttt{models/unet.py}. Channels and parameters for one input/output channel (seismic, $C=1$); output size for a $256\times256$ crop. All convolutions are $3\times3$, stride 1, padding 1, with bias; LReLU slope 0.1; up$\times$2 is nearest-neighbour; [cat $\cdot$] is channel concatenation with the named skip tensor.}
+\caption{U-Net layers ($C=1$, $256\times256$ input). All convolutions $3\times3$; up$\times$2 is nearest-neighbour; [cat] is a skip concatenation.}
 \label{tab:unet}
 \resizebox{\columnwidth}{!}{%
 \begin{tabular}{llccr}

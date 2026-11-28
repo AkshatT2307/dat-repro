@@ -86,7 +86,7 @@ def t_unet():
                 rows.append(f'{name} & {ops} & {ch} & ${sz}^2$ & {n:,} \\\\')
     body = r"""\begin{table}[!t]
 \centering
-\caption{Shallow U-Net \texttt{UNet\_n2n\_un} (no normalization layers), parsed from \texttt{models/unet.py}. Channels and parameters for one input/output channel (seismic, $C=1$); output size for a $256\times256$ crop. All convolutions are $3\times3$, stride 1, padding 1, with bias; LReLU slope 0.1; up$\times$2 is nearest-neighbour; [cat $\cdot$] is channel concatenation with the named skip tensor.}
+\caption{U-Net layers ($C=1$, $256\times256$ input). All convolutions $3\times3$; up$\times$2 is nearest-neighbour; [cat] is a skip concatenation.}
 \label{tab:unet}
 \resizebox{\columnwidth}{!}{%
 \begin{tabular}{llccr}
@@ -126,7 +126,7 @@ def t_image_gauss():
         lines.append(f'{NM[ds]} & {lv} & {f2(pp[0])} & {fm[0]} & {f2(pp[2])} & {fm[1]} & {f2(pp[4])} & {fm[2]}{sd(idr)} & {f2(pp[1])} & {fm[3]} & {f2(pp[3])} & {fm[4]}{sd(sup)} \\\\')
     body = r"""\begin{table*}[!t]
 \centering
-\caption{Additive Gaussian noise, PSNR (dB). ``Paper'' columns are copied from Zhang et al.~\cite{zhang2022idr}; ``ours'' are measured with protocol P (50k steps, batch 4, $256^2$ crops). Fast IDR and supervised RGB rows: mean$\pm$sd over training seeds 0--2; BSD68 (gray) and other methods: seed 0. Our Nr2N is the stage-0 IDR network used as a Noisier2Noise estimator ($2f(z)-z$, averaged over $K=8$ draws), an ablation rather than a reproduction of the paper's Nr2N row. Bold/underline: best/second among methods needing neither clean data nor a second noisy copy (BM3D, Nr2N, Fast IDR); N2N and supervised are reference bounds.}
+\caption{Gaussian noise, PSNR (dB): paper~\cite{zhang2022idr} vs.\ ours. RGB IDR/supervised: mean$\pm$sd over 3 seeds. Bold/underline: best/second excluding N2N and supervised.}
 \label{tab:img_gauss}
 \begin{tabular}{llcccccccccc}
 \toprule
@@ -160,7 +160,7 @@ def t_image_other():
         l2.append(f'{NM[ds]} & g{k} & {pb:.2f} & {pi:.2f} & {oi:.2f} & {oi - pi:+.2f} \\\\')
     body = r"""\begin{table}[!t]
 \centering
-\caption{Non-Gaussian image noise, PSNR (dB), seed 0. (a) Binomial and impulse noise, $p=0.5$ (paper Table~5; the paper's text and table may swap the two row labels). (b) Spatially correlated noise, upstream kernels g1--g4 at upstream ``level 5'' (a variance of $5/255$); g5 is undefined in the released code. $\Delta$ = ours $-$ paper.}
+\caption{Non-Gaussian image noise, PSNR (dB), seed 0. $\Delta$ = ours $-$ paper.}
 \label{tab:img_other}
 \resizebox{\columnwidth}{!}{%
 \begin{tabular}{llcccccc}
@@ -208,7 +208,7 @@ def t_drift():
     inf.append(f'BSDS300 test-100 split instead of all 300 ($\\sigma$=25) & {t100(a1):+.2f} & {t100(a2):+.2f} \\\\')
     body = r"""\begin{table}[!t]
 \centering
-\caption{Attribution of the drift between our earlier reproduction, the paper protocol, and the paper (PSNR change in dB, same evaluator). Training-side rows: Kodak $\sigma$=25, relative to the protocol-P seed-0 model. Inference-side rows: mean over Kodak and BSDS300 at $\sigma$=25/50 (test-100 row: BSDS300 $\sigma$=25 only).}
+\caption{PSNR change (dB) from each tested source of drift.}
 \label{tab:drift}
 \resizebox{\columnwidth}{!}{%
 \begin{tabular}{lcc}
@@ -252,7 +252,7 @@ def t_seis_additive():
                 lines.append(f'{name if lv == 0.5 else ""} & {lv} & {idr[0][k]["snr_in"]:.2f} & ' + ' & '.join(fm) + ' \\\\')
     body = r"""\begin{table*}[!t]
 \centering
-\caption{Synthetic seismic, additive noise: output SNR (dB) of the joint-corpus models (trained on Marmousi2, Overthrust and Salt) on held-out sections; mean over test sections and 3 test-noise seeds. $^\ast$Processing versions of Marmousi2 never seen in training. sg Fast IDR and supervised: mean over training seeds 0--2; all other entries seed 0. BM3D is given the oracle noise $\sigma$ (sg) or PSD (sb). Nr2N: stage-0 network, $2f(z)-z$, $K=8$. IDR-fix: Fast IDR trained on one fixed noisy realization. Bold/underline: best/second among methods without clean data or a second noisy copy (supervised and N2N excluded).}
+\caption{Synthetic seismic, additive noise: SNR (dB), joint models; sg IDR/Sup: mean of 3 seeds. $^\ast$Unseen processing. Bold/underline: best/second excluding N2N and supervised.}
 \label{tab:seis_add}
 \begin{tabular}{llcccccccccc}
 \toprule
@@ -284,7 +284,7 @@ def t_seis_sparse():
                 lines.append(f'{name if lv == lvls[0] else ""} & {lv} & {idr[k]["snr_in"]:.2f} & ' + ' & '.join(fm) + ' \\\\')
     body = r"""\begin{table}[!t]
 \centering
-\caption{Synthetic seismic, sparse noise (joint-corpus models, seed 0): output SNR (dB). Masked-$L_2$ loss for dead traces. Classical: $f$-$x$ deconvolution and $5\times3$ median for spikes; trace interpolation for dead traces (second classical column). $^\ast$Unseen processing; $^\dagger$field section with noise added (reference = original section). Bold/underline among classical and Fast IDR.}
+\caption{Synthetic seismic, sparse noise: SNR (dB), joint models, seed 0. $^\ast$Unseen processing; $^\dagger$field data with added noise.}
 \label{tab:seis_sparse}
 \resizebox{\columnwidth}{!}{%
 \begin{tabular}{llccccc}
@@ -310,7 +310,7 @@ def t_mismatch():
         lines.append(f'{lab} & ' + ' & '.join(cells) + ' \\\\')
     body = r"""\begin{table}[!t]
 \centering
-\caption{Noise-model mismatch (joint-corpus models, seed 0): output SNR (dB), mean over Marmousi2, Overthrust and Salt test sets. $\sigma=1.5$ lies outside the training range $U[0,1]$. Input SNR: 5.99, $-0.03$, $-3.55$ dB.}
+\caption{Noise-model mismatch: SNR (dB), mean over the synthetic test sets.}
 \label{tab:mismatch}
 \resizebox{\columnwidth}{!}{%
 \begin{tabular}{lcccccc}
@@ -359,7 +359,7 @@ def t_perdataset():
     inp = seis('C1_idr_sg_s0')
     body = r"""\begin{table*}[!t]
 \centering
-\caption{One model per synthetic survey (Kaggle T4, FP32) vs.\ the joint-corpus model (subscript $J$). Top: own-survey test SNR (dB). White noise $\sigma=0.5$: mean$\pm$sd over training seeds 0--2 (joint: mean over seeds 0--2); band-limited $\sigma=0.5$, spikes $p=0.05$, dead traces 0.3 and ``fix'' (Fast IDR on one fixed noisy copy, white): seed 0. Bottom: transfer, white noise $\sigma=0.5$, Fast IDR / supervised, mean over seeds 0--2 (seed sd up to """ + f'{max(sds):.2f}' + r"""\,dB); input SNR """ + ', '.join(f'{inp[(c, "sg", 0.5)]["snr_in"]:.2f}' for c in cols) + r""" dB respectively. $^\ast$Unseen processing.}
+\caption{Per-survey vs.\ joint ($J$) models: own-survey SNR (dB; white noise: mean$\pm$sd over 3 seeds) and transfer (Fast IDR / supervised, mean over 3 seeds). $^\ast$Unseen processing.}
 \label{tab:perdataset}
 \begin{tabular}{lccccccccccc}
 \toprule
@@ -411,7 +411,7 @@ def t_field():
         lines.append(f'{lab} & ' + ' & '.join(cells) + ' \\\\')
     body = r"""\begin{table*}[!t]
 \centering
-\caption{Field data, semi-synthetic test: white noise added to field sections, original section as reference; output SNR (dB), mean over test sections and 3 noise seeds, seed-0 models. ``Trained on the survey'': Fast IDR trained on one fixed noisy copy of the survey's training sections (no clean data). Best classical: $^B$BM3D with oracle $\sigma$, $^P$bandpass 5--60 Hz, $^F$$f$-$x$ deconvolution; BM3D was not run on the 2D lines. The supervised oracle treats the field section as clean and was not run on the 2D lines. Bold: best non-oracle method.}
+\caption{Field data with added white noise: SNR (dB). Best classical: $^B$BM3D, $^P$bandpass, $^F$$f$-$x$. Bold: best non-oracle. BM3D not run on 2D lines.}
 \label{tab:field_semi}
 \begin{tabular}{lcccccccc}
 \toprule
@@ -444,7 +444,7 @@ Method & $\sigma$=0.5 & 1.0 & 0.5 & 1.0 & 0.5 & 1.0 & 0.5 & 1.0 \\
     lines = lines[:-1]
     body = r"""\begin{table}[!t]
 \centering
-\caption{Real field noise (no reference). Removed energy $\|x-\hat y\|^2/\|x\|^2$ in \%, overall and inside / outside 5--60 Hz (each relative to the raw energy in that band), and leakage = mean $|$local similarity$|$ between output and removed component (lower is better; unreliable when almost nothing is removed). Out-of-band fractions also count energy a model adds where the raw data have little (see Fig.~\ref{fig:field_spectra}). $\hat\sigma$: MAD noise estimate; the ``raw + added noise'' model was trained with $\sigma\sim U[0.5\hat\sigma,1.5\hat\sigma]$.}
+\caption{Real field noise: energy removed (\%), overall and in/out of 5--60\,Hz, and leakage.}
 \label{tab:field_real}
 \resizebox{\columnwidth}{!}{%
 \begin{tabular}{llcccc}
@@ -475,7 +475,7 @@ def runtime():
         rows.append(f'{lab} & {gpu} & {ri[0]:.2f} & {rs[0]:.2f} & {ri[1]:.0f} & {rs[1]:.0f} & {100 * (ri[1] / rs[1] - 1):+.0f}\\% \\\\')
     body = r"""\begin{table}[!t]
 \centering
-\caption{Training cost for 50k steps: average throughput (steps/s) and wall-clock time (min). Several jobs shared one GPU, so absolute times are indicative; the IDR/supervised ratio within a row is comparable.}
+\caption{Training cost for 50k steps.}
 \label{tab:runtime}
 \resizebox{\columnwidth}{!}{%
 \begin{tabular}{llccccc}
@@ -524,4 +524,4 @@ Experiment & Runs & Scripts \\
 if __name__ == '__main__':
     tot = t_unet(); print('params', tot)
     t_image_gauss(); t_image_other(); t_drift(); t_seis_additive(); t_seis_sparse(); t_mismatch(); t_perdataset()
-    t_field(); runtime(); t_repro()
+    t_field(); runtime()

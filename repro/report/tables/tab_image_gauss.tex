@@ -1,6 +1,6 @@
 \begin{table*}[!t]
 \centering
-\caption{Additive Gaussian noise, PSNR (dB). ``Paper'' columns are copied from Zhang et al.~\cite{zhang2022idr}; ``ours'' are measured with protocol P (50k steps, batch 4, $256^2$ crops). Fast IDR and supervised RGB rows: mean$\pm$sd over training seeds 0--2; BSD68 (gray) and other methods: seed 0. Our Nr2N is the stage-0 IDR network used as a Noisier2Noise estimator ($2f(z)-z$, averaged over $K=8$ draws), an ablation rather than a reproduction of the paper's Nr2N row. Bold/underline: best/second among methods needing neither clean data nor a second noisy copy (BM3D, Nr2N, Fast IDR); N2N and supervised are reference bounds.}
+\caption{Gaussian noise, PSNR (dB): paper~\cite{zhang2022idr} vs.\ ours. RGB IDR/supervised: mean$\pm$sd over 3 seeds. Bold/underline: best/second excluding N2N and supervised.}
 \label{tab:img_gauss}
 \begin{tabular}{llcccccccccc}
 \toprule
